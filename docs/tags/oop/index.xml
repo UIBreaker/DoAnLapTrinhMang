@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>OOP on Blog Lập Trình Của Tôi</title>
+    <title>OOP on Blog của Nhật Nam</title>
     <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/oop/</link>
-    <description>Recent content in OOP on Blog Lập Trình Của Tôi</description>
+    <description>Recent content in OOP on Blog của Nhật Nam</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>vi-VN</language>
     <lastBuildDate>Wed, 25 Oct 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/oop/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hiểu đúng về Lập trình hướng đối tượng (OOP) trong Java</title>
-      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-oop-co-ban/</link>
+      <title>Hiểu thấu đáo 4 tính chất của OOP qua ví dụ chiếc Smartphone</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b1java-oop-co-ban/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-oop-co-ban/</guid>
-      <description>4 tính chất quan trọng nhất của OOP mà mọi lập trình viên Java cần nắm vững.</description>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b1java-oop-co-ban/</guid>
+      <description>Tại sao OOP lại thống trị thế giới phần mềm? Cùng giải mã qua Đóng gói, Kế thừa, Đa hình và Trừu tượng.</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>JavaScript on Blog của Nhật Nam</title>
+    <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/javascript/</link>
+    <description>Recent content in JavaScript on Blog của Nhật Nam</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-VN</language>
+    <lastBuildDate>Sun, 12 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Thao tác DOM: Biến trang web tĩnh thành động</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b9js-dom/</link>
+      <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b9js-dom/</guid>
+      <description>Học cách dùng JavaScript để thay đổi màu sắc, nội dung HTML khi người dùng bấm nút.</description>
+    </item>
+    <item>
+      <title>Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async/Await</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b8js-async-await/</link>
+      <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b8js-async-await/</guid>
+      <description>Làm sao để JS đợi tải xong dữ liệu rồi mới chạy tiếp? Async/Await chính là câu trả lời thanh lịch nhất.</description>
+    </item>
+    <item>
+      <title>Nâng cấp kỹ năng với 5 tính năng ES6 JavaScript cực chất</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b7js-es6/</link>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b7js-es6/</guid>
+      <description>Đừng code như năm 2010 nữa! Hãy sử dụng Arrow Function, Destructuring để code ngắn gọn và &amp;rsquo;ngầu&amp;rsquo; hơn.</description>
+    </item>
+  </channel>
+</rss>

@@ -3,9 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/</loc>
+    <lastmod>2023-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/dom/</loc>
+    <lastmod>2023-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/frontend/</loc>
+    <lastmod>2023-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/javascript/</loc>
+    <lastmod>2023-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/</loc>
+    <lastmod>2023-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/</loc>
+    <lastmod>2023-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b9js-dom/</loc>
+    <lastmod>2023-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/advance/</loc>
+    <lastmod>2023-11-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/async/</loc>
+    <lastmod>2023-11-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b8js-async-await/</loc>
+    <lastmod>2023-11-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/es6/</loc>
+    <lastmod>2023-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b7js-es6/</loc>
+    <lastmod>2023-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/web/</loc>
+    <lastmod>2023-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/api/</loc>
     <lastmod>2023-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-http-request/</loc>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b6java-http-request/</loc>
     <lastmod>2023-11-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/http/</loc>
@@ -14,35 +53,47 @@
     <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/java/</loc>
     <lastmod>2023-11-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/</loc>
-    <lastmod>2023-11-03T00:00:00+00:00</lastmod>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b5java-udp/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/</loc>
-    <lastmod>2023-11-03T00:00:00+00:00</lastmod>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/network/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/error/</loc>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/udp/</loc>
+    <lastmod>2023-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/socket/</loc>
+    <lastmod>2023-11-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/tcp/</loc>
+    <lastmod>2023-11-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b4java-socket-tcp/</loc>
+    <lastmod>2023-11-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/clean-code/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-exception/</loc>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b3java-exception/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-oop-co-ban/</loc>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b2java-collections/</loc>
+    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/data-structures/</loc>
+    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/interview/</loc>
+    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b1java-oop-co-ban/</loc>
+    <lastmod>2023-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/ki%E1%BA%BFn-th%E1%BB%A9c-n%E1%BB%81n-t%E1%BA%A3ng/</loc>
     <lastmod>2023-10-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/oop/</loc>
     <lastmod>2023-10-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-collections/</loc>
-  </url><url>
-    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-socket-tcp/</loc>
-  </url><url>
-    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-udp/</loc>
-  </url><url>
-    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/js-async-await/</loc>
-  </url><url>
-    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/js-dom/</loc>
-  </url><url>
-    <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/js-es6/</loc>
   </url><url>
     <loc>https://UIBreaker.github.io/DoAnLapTrinhMang/categories/</loc>
   </url>

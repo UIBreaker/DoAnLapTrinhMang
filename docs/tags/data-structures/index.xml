@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Data Structures on Blog của Nhật Nam</title>
+    <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/data-structures/</link>
+    <description>Recent content in Data Structures on Blog của Nhật Nam</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-VN</language>
+    <lastBuildDate>Thu, 26 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/data-structures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bảng vàng Java Collections: Khi nào dùng List, Set hay Map?</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b2java-collections/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b2java-collections/</guid>
+      <description>Sai lầm chọn sai cấu trúc dữ liệu có thể làm chậm chương trình gấp 10 lần. Đây là bí kíp để bạn chọn đúng.</description>
+    </item>
+  </channel>
+</rss>

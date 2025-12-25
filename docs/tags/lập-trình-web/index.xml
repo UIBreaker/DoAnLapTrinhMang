@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Lập Trình Web on Blog của Nhật Nam</title>
+    <link>http://localhost:1313/DoAnLapTrinhMang/tags/l%E1%BA%ADp-tr%C3%ACnh-web/</link>
+    <description>Recent content in Lập Trình Web on Blog của Nhật Nam</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-VN</language>
+    <lastBuildDate>Fri, 10 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/DoAnLapTrinhMang/tags/l%E1%BA%ADp-tr%C3%ACnh-web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5 tính năng ES6 trong JavaScript bạn phải biết</title>
+      <link>http://localhost:1313/DoAnLapTrinhMang/posts/js-es6/</link>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/DoAnLapTrinhMang/posts/js-es6/</guid>
+      <description>Cập nhật kiến thức JS hiện đại: So sánh Let/Const với Var, Arrow Function, và sức mạnh của Destructuring.</description>
+    </item>
+  </channel>
+</rss>

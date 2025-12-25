@@ -1,33 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Java on Blog Lập Trình Của Tôi</title>
+    <title>Java on Blog của Nhật Nam</title>
     <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/java/</link>
-    <description>Recent content in Java on Blog Lập Trình Của Tôi</description>
+    <description>Recent content in Java on Blog của Nhật Nam</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>vi-VN</language>
     <lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Gửi HTTP Request trong Java không cần thư viện ngoài</title>
-      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-http-request/</link>
+      <title>Giao tiếp với thế giới Web: Gửi HTTP Request trong Java</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b6java-http-request/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-http-request/</guid>
-      <description>Sử dụng HttpURLConnection để gọi API.</description>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b6java-http-request/</guid>
+      <description>Làm sao để Java lấy được dữ liệu thời tiết, tỷ giá tiền tệ từ các website khác? Hướng dẫn sử dụng HttpClient (Java 11+).</description>
     </item>
     <item>
-      <title>Xử lý ngoại lệ (Exception Handling) chuẩn trong Java</title>
-      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-exception/</link>
+      <title>Java UDP: Tốc độ là tất cả (DatagramSocket)</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b5java-udp/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b5java-udp/</guid>
+      <description>Tại sao xem bóng đá trực tuyến hay dùng UDP? Tìm hiểu về giao thức &amp;lsquo;bắn và quên&amp;rsquo; này.</description>
+    </item>
+    <item>
+      <title>Xây dựng ứng dụng Chat Client-Server với Java Socket (TCP)</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b4java-socket-tcp/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b4java-socket-tcp/</guid>
+      <description>Hướng dẫn từng bước tạo kết nối tin cậy, đảm bảo &amp;rsquo;tin nhắn gửi đi là phải tới nơi&amp;rsquo; với giao thức TCP.</description>
+    </item>
+    <item>
+      <title>Nghệ thuật xử lý lỗi (Exception Handling): Đừng để App bị Crash!</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b3java-exception/</link>
       <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-exception/</guid>
-      <description>Đừng để chương trình bị Crash! Hãy sử dụng Try-Catch đúng cách.</description>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b3java-exception/</guid>
+      <description>Try-Catch không chỉ để sửa lỗi, nó là cách bạn giao tiếp với người dùng khi có sự cố xảy ra.</description>
     </item>
     <item>
-      <title>Hiểu đúng về Lập trình hướng đối tượng (OOP) trong Java</title>
-      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-oop-co-ban/</link>
+      <title>Bảng vàng Java Collections: Khi nào dùng List, Set hay Map?</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b2java-collections/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b2java-collections/</guid>
+      <description>Sai lầm chọn sai cấu trúc dữ liệu có thể làm chậm chương trình gấp 10 lần. Đây là bí kíp để bạn chọn đúng.</description>
+    </item>
+    <item>
+      <title>Hiểu thấu đáo 4 tính chất của OOP qua ví dụ chiếc Smartphone</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b1java-oop-co-ban/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-oop-co-ban/</guid>
-      <description>4 tính chất quan trọng nhất của OOP mà mọi lập trình viên Java cần nắm vững.</description>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b1java-oop-co-ban/</guid>
+      <description>Tại sao OOP lại thống trị thế giới phần mềm? Cùng giải mã qua Đóng gói, Kế thừa, Đa hình và Trừu tượng.</description>
     </item>
   </channel>
 </rss>

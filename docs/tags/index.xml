@@ -1,13 +1,69 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Tags on Blog Lập Trình Của Tôi</title>
+    <title>Tags on Blog của Nhật Nam</title>
     <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/</link>
-    <description>Recent content in Tags on Blog Lập Trình Của Tôi</description>
+    <description>Recent content in Tags on Blog của Nhật Nam</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>vi-VN</language>
-    <lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Nov 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DOM</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/dom/</link>
+      <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/dom/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Frontend</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/frontend/</link>
+      <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/frontend/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/javascript/</link>
+      <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Advance</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/advance/</link>
+      <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/advance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Async</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/async/</link>
+      <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/async/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ES6</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/es6/</link>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/es6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/web/</link>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/web/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>API</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/api/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/api/</guid>
+      <description></description>
+    </item>
     <item>
       <title>HTTP</title>
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/http/</link>
@@ -23,10 +79,59 @@
       <description></description>
     </item>
     <item>
-      <title>Error</title>
-      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/error/</link>
+      <title>Network</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/network/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UDP</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/udp/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/udp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Socket</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/socket/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/socket/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TCP</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/tcp/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/tcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Clean Code</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/clean-code/</link>
       <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/error/</guid>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/clean-code/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Structures</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/data-structures/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/data-structures/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interview</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/interview/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/interview/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kiến Thức Nền Tảng</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/ki%E1%BA%BFn-th%E1%BB%A9c-n%E1%BB%81n-t%E1%BA%A3ng/</link>
+      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/ki%E1%BA%BFn-th%E1%BB%A9c-n%E1%BB%81n-t%E1%BA%A3ng/</guid>
       <description></description>
     </item>
     <item>

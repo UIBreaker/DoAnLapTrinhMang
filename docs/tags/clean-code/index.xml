@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Clean Code on Blog của Nhật Nam</title>
+    <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/clean-code/</link>
+    <description>Recent content in Clean Code on Blog của Nhật Nam</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-VN</language>
+    <lastBuildDate>Fri, 27 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/clean-code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nghệ thuật xử lý lỗi (Exception Handling): Đừng để App bị Crash!</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b3java-exception/</link>
+      <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b3java-exception/</guid>
+      <description>Try-Catch không chỉ để sửa lỗi, nó là cách bạn giao tiếp với người dùng khi có sự cố xảy ra.</description>
+    </item>
+  </channel>
+</rss>

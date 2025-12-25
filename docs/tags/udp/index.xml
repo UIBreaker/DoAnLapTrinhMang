@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>UDP on Blog của Nhật Nam</title>
+    <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/udp/</link>
+    <description>Recent content in UDP on Blog của Nhật Nam</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-VN</language>
+    <lastBuildDate>Thu, 02 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/udp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java UDP: Tốc độ là tất cả (DatagramSocket)</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b5java-udp/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b5java-udp/</guid>
+      <description>Tại sao xem bóng đá trực tuyến hay dùng UDP? Tìm hiểu về giao thức &amp;lsquo;bắn và quên&amp;rsquo; này.</description>
+    </item>
+  </channel>
+</rss>

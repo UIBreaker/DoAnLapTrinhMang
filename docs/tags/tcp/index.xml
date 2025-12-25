@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>TCP on Blog của Nhật Nam</title>
+    <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/tcp/</link>
+    <description>Recent content in TCP on Blog của Nhật Nam</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-VN</language>
+    <lastBuildDate>Wed, 01 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/tcp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Xây dựng ứng dụng Chat Client-Server với Java Socket (TCP)</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b4java-socket-tcp/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b4java-socket-tcp/</guid>
+      <description>Hướng dẫn từng bước tạo kết nối tin cậy, đảm bảo &amp;rsquo;tin nhắn gửi đi là phải tới nơi&amp;rsquo; với giao thức TCP.</description>
+    </item>
+  </channel>
+</rss>

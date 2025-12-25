@@ -1,197 +1,75 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Blog Lập Trình Của Tôi</title>
+    <title>Blog của Nhật Nam</title>
     <link>https://UIBreaker.github.io/DoAnLapTrinhMang/</link>
-    <description>Recent content on Blog Lập Trình Của Tôi</description>
+    <description>Recent content on Blog của Nhật Nam</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>vi-VN</language>
-    <lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Nov 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Gửi HTTP Request trong Java không cần thư viện ngoài</title>
-      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-http-request/</link>
+      <title>Thao tác DOM: Biến trang web tĩnh thành động</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b9js-dom/</link>
+      <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b9js-dom/</guid>
+      <description>Học cách dùng JavaScript để thay đổi màu sắc, nội dung HTML khi người dùng bấm nút.</description>
+    </item>
+    <item>
+      <title>Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async/Await</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b8js-async-await/</link>
+      <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b8js-async-await/</guid>
+      <description>Làm sao để JS đợi tải xong dữ liệu rồi mới chạy tiếp? Async/Await chính là câu trả lời thanh lịch nhất.</description>
+    </item>
+    <item>
+      <title>Nâng cấp kỹ năng với 5 tính năng ES6 JavaScript cực chất</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b7js-es6/</link>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b7js-es6/</guid>
+      <description>Đừng code như năm 2010 nữa! Hãy sử dụng Arrow Function, Destructuring để code ngắn gọn và &amp;rsquo;ngầu&amp;rsquo; hơn.</description>
+    </item>
+    <item>
+      <title>Giao tiếp với thế giới Web: Gửi HTTP Request trong Java</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b6java-http-request/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-http-request/</guid>
-      <description>Sử dụng HttpURLConnection để gọi API.</description>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b6java-http-request/</guid>
+      <description>Làm sao để Java lấy được dữ liệu thời tiết, tỷ giá tiền tệ từ các website khác? Hướng dẫn sử dụng HttpClient (Java 11+).</description>
     </item>
     <item>
-      <title>Xử lý ngoại lệ (Exception Handling) chuẩn trong Java</title>
-      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-exception/</link>
+      <title>Java UDP: Tốc độ là tất cả (DatagramSocket)</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b5java-udp/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b5java-udp/</guid>
+      <description>Tại sao xem bóng đá trực tuyến hay dùng UDP? Tìm hiểu về giao thức &amp;lsquo;bắn và quên&amp;rsquo; này.</description>
+    </item>
+    <item>
+      <title>Xây dựng ứng dụng Chat Client-Server với Java Socket (TCP)</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b4java-socket-tcp/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b4java-socket-tcp/</guid>
+      <description>Hướng dẫn từng bước tạo kết nối tin cậy, đảm bảo &amp;rsquo;tin nhắn gửi đi là phải tới nơi&amp;rsquo; với giao thức TCP.</description>
+    </item>
+    <item>
+      <title>Nghệ thuật xử lý lỗi (Exception Handling): Đừng để App bị Crash!</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b3java-exception/</link>
       <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-exception/</guid>
-      <description>Đừng để chương trình bị Crash! Hãy sử dụng Try-Catch đúng cách.</description>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b3java-exception/</guid>
+      <description>Try-Catch không chỉ để sửa lỗi, nó là cách bạn giao tiếp với người dùng khi có sự cố xảy ra.</description>
     </item>
     <item>
-      <title>Hiểu đúng về Lập trình hướng đối tượng (OOP) trong Java</title>
-      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-oop-co-ban/</link>
+      <title>Bảng vàng Java Collections: Khi nào dùng List, Set hay Map?</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b2java-collections/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b2java-collections/</guid>
+      <description>Sai lầm chọn sai cấu trúc dữ liệu có thể làm chậm chương trình gấp 10 lần. Đây là bí kíp để bạn chọn đúng.</description>
+    </item>
+    <item>
+      <title>Hiểu thấu đáo 4 tính chất của OOP qua ví dụ chiếc Smartphone</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b1java-oop-co-ban/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-oop-co-ban/</guid>
-      <description>4 tính chất quan trọng nhất của OOP mà mọi lập trình viên Java cần nắm vững.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-collections/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-collections/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Bài 2:&lt;/strong&gt; Tạo file &lt;code&gt;java-collections.md&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;title: &amp;#34;Phân biệt List, Set và Map trong Java Collections&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;date: 2023-10-26
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;draft: false
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tags: [&amp;#34;Java&amp;#34;, &amp;#34;Collections&amp;#34;]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;summary: &amp;#34;Khi nào dùng ArrayList? Khi nào dùng HashSet? Bài viết này sẽ giúp bạn lựa chọn đúng.&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Trong Java, &lt;span style=&#34;font-weight:bold&#34;&gt;**Collection Framework**&lt;/span&gt; là kiến thức cực kỳ quan trọng.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;1.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**List (Danh sách):**&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Cho phép phần tử trùng lặp.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Duy trì thứ tự thêm vào.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Ví dụ: &lt;span style=&#34;color:#e6db74&#34;&gt;`ArrayList`&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;`LinkedList`&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;2.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Set (Tập hợp):**&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; **KHÔNG** cho phép trùng lặp.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Không đảm bảo thứ tự (trừ LinkedHashSet).
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Ví dụ: &lt;span style=&#34;color:#e6db74&#34;&gt;`HashSet`&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;`TreeSet`&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;3.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Map (Bản đồ):**&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Lưu trữ dạng Key-Value.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Key không được trùng.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Ví dụ: &lt;span style=&#34;color:#e6db74&#34;&gt;`HashMap`&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;`TreeMap`&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-socket-tcp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-socket-tcp/</guid>
-      <description>&lt;h4 id=&#34;nhóm-2-lập-trình-mạng-với-java-3-bài---quan-trọng-cho-đồ-án-môn-này&#34;&gt;Nhóm 2: Lập trình mạng với Java (3 bài - Quan trọng cho đồ án môn này)&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Bài 4:&lt;/strong&gt; Tạo file &lt;code&gt;java-socket-tcp.md&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;title: &amp;#34;Lập trình mạng: Mô hình Client-Server với Java Socket (TCP)&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;date: 2023-11-01
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;draft: false
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tags: [&amp;#34;Java&amp;#34;, &amp;#34;Network&amp;#34;, &amp;#34;Socket&amp;#34;]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;summary: &amp;#34;Hướng dẫn tạo kết nối TCP đơn giản giữa Client và Server.&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TCP (Transmission Control Protocol) là giao thức tin cậy.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### Server Side
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;```java
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ServerSocket server &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ServerSocket(1234);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Socket socket &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; server.&lt;span style=&#34;color:#a6e22e&#34;&gt;accept&lt;/span&gt;(); &lt;span style=&#34;color:#75715e&#34;&gt;// Chờ kết nối&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Đọc ghi dữ liệu...&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Socket socket &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Socket(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;localhost&amp;#34;&lt;/span&gt;, 1234);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Gửi yêu cầu...&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;```&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-udp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/java-udp/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Bài 5:&lt;/strong&gt; Tạo file &lt;code&gt;java-udp.md&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;title: &amp;#34;Giao thức UDP trong Java: Nhanh nhưng không đảm bảo&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;date: 2023-11-02
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;draft: false
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tags: [&amp;#34;Java&amp;#34;, &amp;#34;Network&amp;#34;, &amp;#34;UDP&amp;#34;]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;summary: &amp;#34;Sự khác biệt giữa DatagramSocket (UDP) và Socket (TCP).&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Khác với TCP, UDP không cần thiết lập kết nối (connectionless).
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; **Ưu điểm:** Tốc độ cao, ít độ trễ.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; **Nhược điểm:** Có thể mất gói tin.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; **Ứng dụng:** Livestream, Game online, Gọi video.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Trong Java, chúng ta sử dụng &lt;span style=&#34;color:#e6db74&#34;&gt;`DatagramSocket`&lt;/span&gt; và &lt;span style=&#34;color:#e6db74&#34;&gt;`DatagramPacket`&lt;/span&gt; để gửi nhận dữ liệu UDP.
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/js-async-await/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/js-async-await/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Bài 8:&lt;/strong&gt; Tạo file &lt;code&gt;js-async-await.md&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;title: &amp;#34;Bất đồng bộ trong JS: Từ Callback đến Async/Await&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;date: 2023-11-11
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;draft: false
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tags: [&amp;#34;JavaScript&amp;#34;, &amp;#34;Async&amp;#34;]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;summary: &amp;#34;Cách xử lý bất đồng bộ giúp code sạch và dễ đọc hơn.&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Ngày xưa chúng ta dùng &lt;span style=&#34;font-weight:bold&#34;&gt;**Callback Hell**&lt;/span&gt;. Sau đó là &lt;span style=&#34;font-weight:bold&#34;&gt;**Promise**&lt;/span&gt;. Và giờ là &lt;span style=&#34;font-weight:bold&#34;&gt;**Async/Await**&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;```javascript
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;async&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fetchData&lt;/span&gt;() {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;response&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fetch&lt;/span&gt;(
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[https://api.github.com](https://api.github.com)&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    );
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;await&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;response&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;json&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  } &lt;span style=&#34;color:#66d9ef&#34;&gt;catch&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;) {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;error&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;```&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/js-dom/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/js-dom/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Bài 9:&lt;/strong&gt; Tạo file &lt;code&gt;js-dom.md&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;title: &amp;#34;Thao tác DOM với JavaScript thuần&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;date: 2023-11-12
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;draft: false
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tags: [&amp;#34;JavaScript&amp;#34;, &amp;#34;DOM&amp;#34;]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;summary: &amp;#34;Không cần jQuery, JS thuần giờ đã rất mạnh mẽ.&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;DOM (Document Object Model) là cầu nối giữa JS và HTML.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; **Chọn phần tử:** &lt;span style=&#34;color:#e6db74&#34;&gt;`document.querySelector(&amp;#39;.class&amp;#39;)`&lt;/span&gt; hoặc &lt;span style=&#34;color:#e6db74&#34;&gt;`document.getElementById(&amp;#39;id&amp;#39;)`&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; **Thêm sự kiện:**
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ``&lt;span style=&#34;color:#e6db74&#34;&gt;`javascript
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  btn.addEventListener(&amp;#34;click&amp;#34;, () =&amp;gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    alert(&amp;#34;Đã bấm nút!&amp;#34;);
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  });
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  `&lt;/span&gt;``
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/js-es6/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/js-es6/</guid>
-      <description>&lt;h4 id=&#34;nhóm-3-javascript-3-bài&#34;&gt;Nhóm 3: JavaScript (3 bài)&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Bài 7:&lt;/strong&gt; Tạo file &lt;code&gt;js-es6.md&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;title: &amp;#34;5 tính năng ES6 trong JavaScript bạn phải biết&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;date: 2023-11-10
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;draft: false
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tags: [&amp;#34;JavaScript&amp;#34;, &amp;#34;ES6&amp;#34;]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;summary: &amp;#34;Cập nhật kiến thức JS hiện đại: Let/Const, Arrow Function, Template Literals.&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;1.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Let &amp;amp; Const:**&lt;/span&gt; Thay thế &lt;span style=&#34;color:#e6db74&#34;&gt;`var`&lt;/span&gt; để quản lý scope tốt hơn.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;2.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Arrow Function:**&lt;/span&gt; Viết hàm ngắn gọn.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   ``&lt;span style=&#34;color:#e6db74&#34;&gt;`javascript
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;   const sum = (a, b) =&amp;gt; a + b;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;   console.log(`&lt;/span&gt;Hello ${name}&lt;span style=&#34;color:#e6db74&#34;&gt;`);
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;   `&lt;/span&gt;``
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b1java-oop-co-ban/</guid>
+      <description>Tại sao OOP lại thống trị thế giới phần mềm? Cùng giải mã qua Đóng gói, Kế thừa, Đa hình và Trừu tượng.</description>
     </item>
   </channel>
 </rss>
