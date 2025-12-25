@@ -8,14 +8,21 @@ theme = 'PaperMod'
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = true
-  
+
+  # --- ĐOẠN MỚI THÊM ĐỂ SỬA LỖI ---
+  [params.assets]
+    disableFingerprinting = true
+  # --------------------------------
+
   [params.profileMode]
     enabled = true
-    title = "Xin chào, tôi là [Tên Bạn]"
+    title = "Nguyễn Văn A" # Nhớ sửa tên bạn ở đây luôn nhé!
     subtitle = "Sinh viên đam mê Lập trình Mạng & Java"
+    
     [[params.profileMode.buttons]]
       name = "GitHub"
-      url = "https://github.com/username-cua-ban"
+      url = "https://github.com/UIBreaker"
+
 [menu]
   [[menu.main]]
     identifier = "home"
