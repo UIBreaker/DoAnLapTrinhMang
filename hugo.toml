@@ -1,0 +1,29 @@
+baseURL = 'https://UIBreaker.github.io/DoAnLapTrinhMang/'
+publishDir = "docs"
+languageCode = 'vi-VN'
+title = 'Blog Lập Trình Của Tôi'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  
+  [params.profileMode]
+    enabled = true
+    title = "Xin chào, tôi là [Tên Bạn]"
+    subtitle = "Sinh viên đam mê Lập trình Mạng & Java"
+    [[params.profileMode.buttons]]
+      name = "GitHub"
+      url = "https://github.com/username-cua-ban"
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts"
+    weight = 20

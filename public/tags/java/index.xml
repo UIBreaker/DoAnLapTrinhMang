@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Java on Blog Lập Trình Của Tôi</title>
+    <link>https://username.github.io/DoAnLapTrinhMang/tags/java/</link>
+    <description>Recent content in Java on Blog Lập Trình Của Tôi</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-VN</language>
+    <lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://username.github.io/DoAnLapTrinhMang/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gửi HTTP Request trong Java không cần thư viện ngoài</title>
+      <link>https://username.github.io/DoAnLapTrinhMang/posts/java-http-request/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://username.github.io/DoAnLapTrinhMang/posts/java-http-request/</guid>
+      <description>Sử dụng HttpURLConnection để gọi API.</description>
+    </item>
+    <item>
+      <title>Xử lý ngoại lệ (Exception Handling) chuẩn trong Java</title>
+      <link>https://username.github.io/DoAnLapTrinhMang/posts/java-exception/</link>
+      <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://username.github.io/DoAnLapTrinhMang/posts/java-exception/</guid>
+      <description>Đừng để chương trình bị Crash! Hãy sử dụng Try-Catch đúng cách.</description>
+    </item>
+    <item>
+      <title>Hiểu đúng về Lập trình hướng đối tượng (OOP) trong Java</title>
+      <link>https://username.github.io/DoAnLapTrinhMang/posts/java-oop-co-ban/</link>
+      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://username.github.io/DoAnLapTrinhMang/posts/java-oop-co-ban/</guid>
+      <description>4 tính chất quan trọng nhất của OOP mà mọi lập trình viên Java cần nắm vững.</description>
+    </item>
+  </channel>
+</rss>
