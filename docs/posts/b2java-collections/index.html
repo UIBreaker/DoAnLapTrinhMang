@@ -117,8 +117,8 @@
   "keywords": [
     "Java", "Data Structures", "Interview"
   ],
-  "articleBody": "Bài 2: java-collections.md Bài này dùng bảng so sánh trực quan, giúp người đọc chọn đúng cấu trúc dữ liệu.\nTrong phỏng vấn Java, câu hỏi về Collections luôn chiếm 80%. Dưới đây là bảng so sánh \"thần thánh\" giúp bạn phân biệt rõ ràng. ## Bảng so sánh nhanh | Đặc điểm | List (ArrayList) | Set (HashSet) | Map (HashMap) | | :------------- | :------------------- | :---------------- | :------------------- | | **Trùng lặp** | ✅ Cho phép | ❌ Cấm kị | Key: ❌, Value: ✅ | | **Thứ tự** | ✅ Giữ nguyên | ❌ Lộn xộn | ❌ Lộn xộn | | **Truy cập** | Theo index (0, 1...) | Không có index | Theo Key (Chìa khóa) | | **Tốc độ tìm** | Chậm (O(n)) | Siêu nhanh (O(1)) | Siêu nhanh (O(1)) | ## Khi nào dùng cái gì? ### 1. Dùng List khi cần \"Danh sách sinh viên\" Cần lưu trữ theo thứ tự, có thể có 2 người cùng tên. ```java List\u003cString\u003e students = new ArrayList\u003c\u003e(); students.add(\"Nam\"); students.add(\"Nam\"); ``` 2. Dùng Set khi cần “Danh sách CCCD” Mỗi số CCCD là duy nhất, không thể trùng lặp.\nSet\u003cString\u003e idCards = new HashSet\u003c\u003e(); idCards.add(\"001\"); idCards.add(\"001\"); // Hệ thống sẽ lờ đi cái thứ 2 ",
-  "wordCount" : "211",
+  "articleBody": "Trong phỏng vấn Java, câu hỏi về Collections luôn chiếm 80%. Không chỉ là lý thuyết, việc chọn sai (List thay vì Set) có thể khiến tính năng tìm kiếm của bạn chậm đi cả nghìn lần.\nDưới đây là bảng so sánh “xương máu” giúp bạn phân biệt rõ ràng.\n1. Bảng so sánh nhanh Đặc điểm List (ArrayList) Set (HashSet) Map (HashMap) Trùng lặp ✅ Cho phép ❌ Cấm kị (Duy nhất) Key: ❌, Value: ✅ Thứ tự ✅ Giữ nguyên lúc thêm ❌ Lộn xộn ❌ Lộn xộn Truy cập Theo index [0], [1] Không có index Theo Key (Chìa khóa) Tốc độ tìm Chậm (O(n)) Siêu nhanh (O(1)) Siêu nhanh (O(1)) 2. Đi vào thực chiến Trường hợp 1: Dùng List (Danh sách sinh viên) Khi nào dùng? Khi bạn cần lưu trữ danh sách theo thứ tự thêm vào, và chấp nhận dữ liệu trùng lặp (Ví dụ: Lịch sử giao dịch, Danh sách điểm danh).\n// Khởi tạo List\u003cString\u003e students = new ArrayList\u003c\u003e(); students.add(\"Nhật Nam\"); students.add(\"Minh Tuấn\"); students.add(\"Nhật Nam\"); // List chấp nhận trùng tên // Duyệt danh sách (Cách hiện đại) System.out.println(\"--- Danh sách lớp ---\"); for (String s : students) { System.out.println(s); } // Kết quả: In đủ 3 dòng, bao gồm 2 lần \"Nhật Nam\" Trường hợp 2: Dùng Set (Kho số CCCD/Email) Khi nào dùng? Khi dữ liệu bắt buộc phải là DUY NHẤT. Nếu cố tình thêm cái trùng, nó sẽ tự động bị loại bỏ.\nSet\u003cString\u003e idCards = new HashSet\u003c\u003e(); idCards.add(\"079202001\"); idCards.add(\"079202002\"); idCards.add(\"079202001\"); // Trùng -\u003e Hệ thống tự lờ đi, không lỗi System.out.println(\"Tổng số CCCD: \" + idCards.size()); // Kết quả: 2 (Cái trùng đã bị loại) Trường hợp 3: Dùng Map (Tra cứu từ điển/Cấu hình) Khi nào dùng? Khi bạn muốn tìm kiếm dữ liệu cực nhanh thông qua một “chìa khóa” (Key). Ví dụ: Nhập Mã SV -\u003e Ra tên SV.\n// Key là Mã SV (String), Value là Tên (String) Map\u003cString, String\u003e dictionary = new HashMap\u003c\u003e(); // Thêm dữ liệu: put(Key, Value) dictionary.put(\"SV001\", \"Nguyễn Vũ Nhật Nam\"); dictionary.put(\"SV002\", \"Trần Văn B\"); // Tra cứu: get(Key) String name = dictionary.get(\"SV001\"); System.out.println(\"Sinh viên mã SV001 là: \" + name); // Kết quả: Nguyễn Vũ Nhật Nam (Tốc độ tìm kiếm tức thì) 3. Pro Tip: Tại sao tốc độ lại quan trọng? Hãy tưởng tượng bạn tìm một cuốn sách trong thư viện:\nCách List (O(n)): Bạn đi từng kệ, xem từng cuốn sách từ đầu đến cuối thư viện để tìm. -\u003e Rất lâu.\nCách Map/Set (O(1)): Bạn tra máy tính, máy báo “Kệ A, Dòng 3”. Bạn đi thẳng tới đó lấy. -\u003e Cực nhanh.\nLời khuyên: Nếu bài toán yêu cầu “Kiểm tra xem A có tồn tại không?” với dữ liệu lớn, hãy ưu tiên dùng Set hoặc Map thay vì List nhé!\n",
+  "wordCount" : "472",
   "inLanguage": "en",
   "datePublished": "2023-10-26T00:00:00Z",
   "dateModified": "2023-10-26T00:00:00Z",
@@ -172,6 +172,11 @@
                 </a>
             </li>
             <li>
+                <a href="https://UIBreaker.github.io/DoAnLapTrinhMang/about" title="Giới thiệu">
+                    <span>Giới thiệu</span>
+                </a>
+            </li>
+            <li>
                 <a href="https://UIBreaker.github.io/DoAnLapTrinhMang/posts" title="Bài Viết">
                     <span>Bài Viết</span>
                 </a>
@@ -187,7 +192,7 @@
     <h1 class="post-title entry-hint-parent">
       Bảng vàng Java Collections: Khi nào dùng List, Set hay Map?
     </h1>
-    <div class="post-meta"><span title='2023-10-26 00:00:00 +0000 UTC'>October 26, 2023</span>&nbsp;·&nbsp;<span>1 min</span>
+    <div class="post-meta"><span title='2023-10-26 00:00:00 +0000 UTC'>October 26, 2023</span>&nbsp;·&nbsp;<span>3 min</span>
 
 </div>
   </header> <div class="toc">
@@ -198,46 +203,108 @@
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#b%c3%a0i-2-java-collectionsmd" aria-label="Bài 2: java-collections.md">Bài 2: java-collections.md</a></li>
+                    <a href="#1-b%e1%ba%a3ng-so-s%c3%a1nh-nhanh" aria-label="1. Bảng so sánh nhanh">1. Bảng so sánh nhanh</a></li>
                 <li>
-                    <a href="#2-d%c3%b9ng-set-khi-c%e1%ba%a7n-danh-s%c3%a1ch-cccd" aria-label="2. Dùng Set khi cần &ldquo;Danh sách CCCD&rdquo;">2. Dùng Set khi cần &ldquo;Danh sách CCCD&rdquo;</a>
+                    <a href="#2-%c4%91i-v%c3%a0o-th%e1%bb%b1c-chi%e1%ba%bfn" aria-label="2. Đi vào thực chiến">2. Đi vào thực chiến</a><ul>
+                        
+                <li>
+                    <a href="#tr%c6%b0%e1%bb%9dng-h%e1%bb%a3p-1-d%c3%b9ng-list-danh-s%c3%a1ch-sinh-vi%c3%aan" aria-label="Trường hợp 1: Dùng List (Danh sách sinh viên)">Trường hợp 1: Dùng List (Danh sách sinh viên)</a></li></ul>
+                </li>
+                <li>
+                    <a href="#tr%c6%b0%e1%bb%9dng-h%e1%bb%a3p-2-d%c3%b9ng-set-kho-s%e1%bb%91-cccdemail" aria-label="Trường hợp 2: Dùng Set (Kho số CCCD/Email)">Trường hợp 2: Dùng Set (Kho số CCCD/Email)</a></li>
+                <li>
+                    <a href="#tr%c6%b0%e1%bb%9dng-h%e1%bb%a3p-3-d%c3%b9ng-map-tra-c%e1%bb%a9u-t%e1%bb%ab-%c4%91i%e1%bb%83nc%e1%ba%a5u-h%c3%acnh" aria-label="Trường hợp 3: Dùng Map (Tra cứu từ điển/Cấu hình)">Trường hợp 3: Dùng Map (Tra cứu từ điển/Cấu hình)</a></li>
+                <li>
+                    <a href="#3-pro-tip-t%e1%ba%a1i-sao-t%e1%bb%91c-%c4%91%e1%bb%99-l%e1%ba%a1i-quan-tr%e1%bb%8dng" aria-label="3. Pro Tip: Tại sao tốc độ lại quan trọng?">3. Pro Tip: Tại sao tốc độ lại quan trọng?</a>
                 </li>
             </ul>
         </div>
     </details>
 </div>
 
-  <div class="post-content"><h2 id="bài-2-java-collectionsmd">Bài 2: <code>java-collections.md</code><a hidden class="anchor" aria-hidden="true" href="#bài-2-java-collectionsmd">#</a></h2>
-<p><em>Bài này dùng bảng so sánh trực quan, giúp người đọc chọn đúng cấu trúc dữ liệu.</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Trong phỏng vấn Java, câu hỏi về Collections luôn chiếm 80%. Dưới đây là bảng so sánh &#34;thần thánh&#34; giúp bạn phân biệt rõ ràng.
+  <div class="post-content"><p>Trong phỏng vấn Java, câu hỏi về Collections luôn chiếm 80%. Không chỉ là lý thuyết, việc chọn sai (<code>List</code> thay vì <code>Set</code>) có thể khiến tính năng tìm kiếm của bạn chậm đi cả nghìn lần.</p>
+<p>Dưới đây là bảng so sánh &ldquo;xương máu&rdquo; giúp bạn phân biệt rõ ràng.</p>
+<h2 id="1-bảng-so-sánh-nhanh">1. Bảng so sánh nhanh<a hidden class="anchor" aria-hidden="true" href="#1-bảng-so-sánh-nhanh">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Đặc điểm</th>
+          <th style="text-align: left">List (ArrayList)</th>
+          <th style="text-align: left">Set (HashSet)</th>
+          <th style="text-align: left">Map (HashMap)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>Trùng lặp</strong></td>
+          <td style="text-align: left">✅ Cho phép</td>
+          <td style="text-align: left">❌ Cấm kị (Duy nhất)</td>
+          <td style="text-align: left">Key: ❌, Value: ✅</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Thứ tự</strong></td>
+          <td style="text-align: left">✅ Giữ nguyên lúc thêm</td>
+          <td style="text-align: left">❌ Lộn xộn</td>
+          <td style="text-align: left">❌ Lộn xộn</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Truy cập</strong></td>
+          <td style="text-align: left">Theo index <code>[0], [1]</code></td>
+          <td style="text-align: left">Không có index</td>
+          <td style="text-align: left">Theo <code>Key</code> (Chìa khóa)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Tốc độ tìm</strong></td>
+          <td style="text-align: left">Chậm (O(n))</td>
+          <td style="text-align: left">Siêu nhanh (O(1))</td>
+          <td style="text-align: left">Siêu nhanh (O(1))</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="2-đi-vào-thực-chiến">2. Đi vào thực chiến<a hidden class="anchor" aria-hidden="true" href="#2-đi-vào-thực-chiến">#</a></h2>
+<h3 id="trường-hợp-1-dùng-list-danh-sách-sinh-viên">Trường hợp 1: Dùng List (Danh sách sinh viên)<a hidden class="anchor" aria-hidden="true" href="#trường-hợp-1-dùng-list-danh-sách-sinh-viên">#</a></h3>
+<p><strong>Khi nào dùng?</strong> Khi bạn cần lưu trữ danh sách theo thứ tự thêm vào, và chấp nhận dữ liệu trùng lặp (Ví dụ: Lịch sử giao dịch, Danh sách điểm danh).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Khởi tạo</span>
+</span></span><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> students <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>students.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;Nhật Nam&#34;</span>);
+</span></span><span style="display:flex;"><span>students.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;Minh Tuấn&#34;</span>);
+</span></span><span style="display:flex;"><span>students.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;Nhật Nam&#34;</span>); <span style="color:#75715e">// List chấp nhận trùng tên</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## Bảng so sánh nhanh
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>| Đặc điểm       | List (ArrayList)     | Set (HashSet)     | Map (HashMap)        |
-</span></span><span style="display:flex;"><span>| :------------- | :------------------- | :---------------- | :------------------- |
-</span></span><span style="display:flex;"><span>| <span style="font-weight:bold">**Trùng lặp**</span>  | ✅ Cho phép          | ❌ Cấm kị         | Key: ❌, Value: ✅   |
-</span></span><span style="display:flex;"><span>| <span style="font-weight:bold">**Thứ tự**</span>     | ✅ Giữ nguyên        | ❌ Lộn xộn        | ❌ Lộn xộn           |
-</span></span><span style="display:flex;"><span>| <span style="font-weight:bold">**Truy cập**</span>   | Theo index (0, 1...) | Không có index    | Theo Key (Chìa khóa) |
-</span></span><span style="display:flex;"><span>| <span style="font-weight:bold">**Tốc độ tìm**</span> | Chậm (O(n))          | Siêu nhanh (O(1)) | Siêu nhanh (O(1))    |
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## Khi nào dùng cái gì?
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">### 1. Dùng List khi cần &#34;Danh sách sinh viên&#34;
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Cần lưu trữ theo thứ tự, có thể có 2 người cùng tên.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">```java
-</span></span></span><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> students <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;</span>();
-</span></span><span style="display:flex;"><span>students.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;Nam&#34;</span>);
-</span></span><span style="display:flex;"><span>students.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;Nam&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
-</span></span></code></pre></div><h2 id="2-dùng-set-khi-cần-danh-sách-cccd">2. Dùng Set khi cần &ldquo;Danh sách CCCD&rdquo;<a hidden class="anchor" aria-hidden="true" href="#2-dùng-set-khi-cần-danh-sách-cccd">#</a></h2>
-<p>Mỗi số CCCD là duy nhất, không thể trùng lặp.</p>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Duyệt danh sách (Cách hiện đại)</span>
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;--- Danh sách lớp ---&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (String s : students) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(s);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Kết quả: In đủ 3 dòng, bao gồm 2 lần &#34;Nhật Nam&#34;</span>
+</span></span></code></pre></div><h2 id="trường-hợp-2-dùng-set-kho-số-cccdemail">Trường hợp 2: Dùng Set (Kho số CCCD/Email)<a hidden class="anchor" aria-hidden="true" href="#trường-hợp-2-dùng-set-kho-số-cccdemail">#</a></h2>
+<p>Khi nào dùng? Khi dữ liệu bắt buộc phải là DUY NHẤT. Nếu cố tình thêm cái trùng, nó sẽ tự động bị loại bỏ.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Set<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> idCards <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;&gt;</span>();
-</span></span><span style="display:flex;"><span>idCards.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;001&#34;</span>);
-</span></span><span style="display:flex;"><span>idCards.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;001&#34;</span>); <span style="color:#75715e">// Hệ thống sẽ lờ đi cái thứ 2</span>
-</span></span></code></pre></div>
+</span></span><span style="display:flex;"><span>idCards.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;079202001&#34;</span>);
+</span></span><span style="display:flex;"><span>idCards.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;079202002&#34;</span>);
+</span></span><span style="display:flex;"><span>idCards.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;079202001&#34;</span>); <span style="color:#75715e">// Trùng -&gt; Hệ thống tự lờ đi, không lỗi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Tổng số CCCD: &#34;</span> <span style="color:#f92672">+</span> idCards.<span style="color:#a6e22e">size</span>());
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Kết quả: 2 (Cái trùng đã bị loại)</span>
+</span></span></code></pre></div><h2 id="trường-hợp-3-dùng-map-tra-cứu-từ-điểncấu-hình">Trường hợp 3: Dùng Map (Tra cứu từ điển/Cấu hình)<a hidden class="anchor" aria-hidden="true" href="#trường-hợp-3-dùng-map-tra-cứu-từ-điểncấu-hình">#</a></h2>
+<p>Khi nào dùng? Khi bạn muốn tìm kiếm dữ liệu cực nhanh thông qua một &ldquo;chìa khóa&rdquo; (Key). Ví dụ: Nhập Mã SV -&gt; Ra tên SV.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#75715e">// Key là Mã SV (String), Value là Tên (String)</span>
+</span></span><span style="display:flex;"><span>Map<span style="color:#f92672">&lt;</span>String, String<span style="color:#f92672">&gt;</span> dictionary <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Thêm dữ liệu: put(Key, Value)</span>
+</span></span><span style="display:flex;"><span>dictionary.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;SV001&#34;</span>, <span style="color:#e6db74">&#34;Nguyễn Vũ Nhật Nam&#34;</span>);
+</span></span><span style="display:flex;"><span>dictionary.<span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#34;SV002&#34;</span>, <span style="color:#e6db74">&#34;Trần Văn B&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tra cứu: get(Key)</span>
+</span></span><span style="display:flex;"><span>String name <span style="color:#f92672">=</span> dictionary.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;SV001&#34;</span>);
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Sinh viên mã SV001 là: &#34;</span> <span style="color:#f92672">+</span> name);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Kết quả: Nguyễn Vũ Nhật Nam (Tốc độ tìm kiếm tức thì)</span>
+</span></span></code></pre></div><h2 id="3-pro-tip-tại-sao-tốc-độ-lại-quan-trọng">3. Pro Tip: Tại sao tốc độ lại quan trọng?<a hidden class="anchor" aria-hidden="true" href="#3-pro-tip-tại-sao-tốc-độ-lại-quan-trọng">#</a></h2>
+<p>Hãy tưởng tượng bạn tìm một cuốn sách trong thư viện:</p>
+<p>Cách List (O(n)): Bạn đi từng kệ, xem từng cuốn sách từ đầu đến cuối thư viện để tìm. -&gt; Rất lâu.</p>
+<p>Cách Map/Set (O(1)): Bạn tra máy tính, máy báo &ldquo;Kệ A, Dòng 3&rdquo;. Bạn đi thẳng tới đó lấy. -&gt; Cực nhanh.</p>
+<p>Lời khuyên: Nếu bài toán yêu cầu &ldquo;Kiểm tra xem A có tồn tại không?&rdquo; với dữ liệu lớn, hãy ưu tiên dùng Set hoặc Map thay vì List nhé!</p>
+
 
   </div>
 
@@ -251,7 +318,7 @@
   <a class="prev" href="https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b3java-exception/">
     <span class="title">« Prev</span>
     <br>
-    <span>Nghệ thuật xử lý lỗi (Exception Handling): Đừng để App bị Crash!</span>
+    <span>Nghệ thuật xử lý lỗi (Exception Handling): Từ cơ bản đến Clean Code</span>
   </a>
   <a class="next" href="https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b1java-oop-co-ban/">
     <span class="title">Next »</span>

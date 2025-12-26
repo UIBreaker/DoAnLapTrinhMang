@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Interactive on Blog của Nhật Nam</title>
+    <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/interactive/</link>
+    <description>Recent content in Interactive on Blog của Nhật Nam</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-VN</language>
+    <lastBuildDate>Sun, 12 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/interactive/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Làm chủ DOM JavaScript: Biến giao diện tĩnh thành động</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b9js-dom/</link>
+      <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b9js-dom/</guid>
+      <description>DOM là gì? Học cách bắt sự kiện click, lấy dữ liệu từ ô Input và tạo tính năng Dark Mode &amp;lsquo;xịn sò&amp;rsquo; chỉ với vài dòng code.</description>
+    </item>
+  </channel>
+</rss>

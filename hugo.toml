@@ -1,51 +1,59 @@
 baseURL = 'https://UIBreaker.github.io/DoAnLapTrinhMang/'
 publishDir = "docs"
 languageCode = 'vi-VN'
-title = 'Blog của Nhật Nam' # Đã sửa cho cá nhân hóa hơn
+title = 'Blog của Nhật Nam'
 theme = 'PaperMod'
-author = "Nguyễn Vũ Nhật Nam" # Thêm metadata tác giả
+author = "Nguyễn Vũ Nhật Nam"
+
 
 [params]
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = true
-  ShowPostNavLinks = true # Hiện bài trước/sau
-  ShowBreadCrumbs = true  # Hiện đường dẫn điều hướng
-  ShowCodeCopyButtons = true # Nút copy code (Rất cần cho blog lập trình!)
-  ShowToc = true # Hiện mục lục bài viết
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
 
-  # --- FIX LỖI GIAO DIỆN (GIỮ NGUYÊN) ---
   [params.assets]
     disableFingerprinting = true
-  # --------------------------------------
+    customCSS = ["css/custom.css"] # <-- THÊM DÒNG NÀY
 
   [params.profileMode]
     enabled = true
-    title = "Nguyễn Vũ Nhật Nam" # Đã cập nhật tên chính chủ
-    subtitle = "Sinh viên KTPM | Đam mê Lập trình Mạng & Java" # Trau chuốt lại slogan chút cho hay
-    imageUrl = "https://github.com/UIBreaker.png" # Tự động lấy avatar từ GitHub của bạn (Nhìn rất Pro!)
+    title = "Nguyễn Vũ Nhật Nam"
+    # Slogan ngắn gọn, đúng chất sinh viên HUTECH sắp ra trường
+    subtitle = "Sinh viên Năm 4 CNTT - HUTECH | Chuyên trị Java & Network"
+    imageUrl = "https://github.com/UIBreaker.png"
     imageTitle = "Avatar"
     imageWidth = 120
     imageHeight = 120
 
-    # Dùng Social Icons nhìn sẽ tinh tế hơn nút bấm to
     [[params.socialIcons]]
       name = "github"
       url = "https://github.com/UIBreaker"
     
-    # Bạn có thể thêm Facebook hoặc Email nếu thích (Bỏ dấu # để mở)
+    # Thêm Facebook/Email để nhà tuyển dụng liên hệ (nếu muốn)
     # [[params.socialIcons]]
-    #   name = "facebook"
-    #   url = "https://facebook.com/link-cua-ban"
+    #   name = "email"
+    #   url = "mailto:nam@example.com"
 
 [menu]
   [[menu.main]]
     identifier = "home"
-    name = "Trang Chủ" # Việt hóa menu
+    name = "Trang Chủ"
     url = "/"
     weight = 10
+  
+  # --- THÊM MENU GIỚI THIỆU Ở ĐÂY ---
+  [[menu.main]]
+    identifier = "about"
+    name = "Giới thiệu" # Nút này sẽ dẫn vào bài viết chi tiết
+    url = "/about"
+    weight = 15
+
   [[menu.main]]
     identifier = "blog"
-    name = "Bài Viết" # Việt hóa menu
+    name = "Bài Viết"
     url = "/posts"
     weight = 20

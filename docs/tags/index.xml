@@ -23,6 +23,13 @@
       <description></description>
     </item>
     <item>
+      <title>Interactive</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/interactive/</link>
+      <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/interactive/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>JavaScript</title>
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/javascript/</link>
       <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
@@ -30,10 +37,10 @@
       <description></description>
     </item>
     <item>
-      <title>Advance</title>
-      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/advance/</link>
+      <title>Advanced</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/advanced/</link>
       <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/advance/</guid>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/advanced/</guid>
       <description></description>
     </item>
     <item>
@@ -41,6 +48,13 @@
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/async/</link>
       <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/async/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ES7</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/es7/</link>
+      <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/es7/</guid>
       <description></description>
     </item>
     <item>
@@ -58,10 +72,10 @@
       <description></description>
     </item>
     <item>
-      <title>API</title>
-      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/api/</link>
+      <title>Backend</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/backend/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/api/</guid>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/backend/</guid>
       <description></description>
     </item>
     <item>
@@ -79,10 +93,24 @@
       <description></description>
     </item>
     <item>
+      <title>REST API</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/rest-api/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/rest-api/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Network</title>
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/network/</link>
       <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Socket</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/socket/</link>
+      <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/socket/</guid>
       <description></description>
     </item>
     <item>
@@ -93,17 +121,17 @@
       <description></description>
     </item>
     <item>
-      <title>Socket</title>
-      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/socket/</link>
-      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/socket/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>TCP</title>
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/tcp/</link>
       <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/tcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Best Practice</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/best-practice/</link>
+      <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/best-practice/</guid>
       <description></description>
     </item>
     <item>

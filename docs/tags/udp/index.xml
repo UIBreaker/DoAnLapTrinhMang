@@ -9,11 +9,11 @@
     <lastBuildDate>Thu, 02 Nov 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/udp/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Java UDP: Tốc độ là tất cả (DatagramSocket)</title>
+      <title>Java UDP: Giao thức &#39;Bắn và Quên&#39; - Tốc độ là trên hết</title>
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b5java-udp/</link>
       <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b5java-udp/</guid>
-      <description>Tại sao xem bóng đá trực tuyến hay dùng UDP? Tìm hiểu về giao thức &amp;lsquo;bắn và quên&amp;rsquo; này.</description>
+      <description>Tại sao xem bóng đá trực tuyến hay Game FPS dùng UDP thay vì TCP? Tìm hiểu về DatagramSocket và sự khác biệt cốt lõi.</description>
     </item>
   </channel>
 </rss>

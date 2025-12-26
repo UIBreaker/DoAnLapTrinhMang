@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Backend on Blog của Nhật Nam</title>
+    <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/backend/</link>
+    <description>Recent content in Backend on Blog của Nhật Nam</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-VN</language>
+    <lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/backend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gọi API trong Java: Từ GET cơ bản đến Async nâng cao</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b6java-http-request/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b6java-http-request/</guid>
+      <description>Quên HttpURLConnection đi! Đây là cách sử dụng HttpClient (Java 11) để gọi API lấy dữ liệu GitHub và gửi JSON chuyên nghiệp.</description>
+    </item>
+  </channel>
+</rss>

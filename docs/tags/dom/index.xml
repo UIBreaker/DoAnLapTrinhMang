@@ -9,11 +9,11 @@
     <lastBuildDate>Sun, 12 Nov 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/dom/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Thao tác DOM: Biến trang web tĩnh thành động</title>
+      <title>Làm chủ DOM JavaScript: Biến giao diện tĩnh thành động</title>
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b9js-dom/</link>
       <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b9js-dom/</guid>
-      <description>Học cách dùng JavaScript để thay đổi màu sắc, nội dung HTML khi người dùng bấm nút.</description>
+      <description>DOM là gì? Học cách bắt sự kiện click, lấy dữ liệu từ ô Input và tạo tính năng Dark Mode &amp;lsquo;xịn sò&amp;rsquo; chỉ với vài dòng code.</description>
     </item>
   </channel>
 </rss>

@@ -16,8 +16,10 @@ Bạn không cần biết bên trong pin điện thoại đấu dây thế nào,
 
 ```java
 public class Smartphone {
-    private int batteryLevel; // Người dùng không thể tự chỉnh pin thành 1000% được!
+    // Dữ liệu được bảo vệ (Private)
+    private int batteryLevel;
 
+    // Phương thức công khai (Public) để tương tác
     public void charge() {
         if (batteryLevel < 100) {
             batteryLevel++;
@@ -27,37 +29,64 @@ public class Smartphone {
 }
 ```
 
-## 2. Tính kế thừa (Inheritance)
+## 2. Tính trừu tượng (Abstraction)
 
-Nguyên tắc: "Đừng viết lại những gì đã có".
+(Mình đưa mục này lên trước để làm nền tảng cho Kế thừa và Đa hình nhé)
 
-iPhone 15 và Samsung S24 đều là Smartphone. Chúng kế thừa các đặc tính chung (nghe, gọi) nhưng có thương hiệu khác nhau.
+Nguyên tắc: "Tập trung vào cái LÀM ĐƯỢC thay vì LÀM NHƯ THẾ NÀO".
+
+Tất cả Smartphone đều phải có chức năng chupAnh(). Nhưng chụp thế nào (xử lý AI, chỉnh sáng...) thì iPhone làm kiểu khác, Samsung làm kiểu khác. Ta dùng abstract để ép buộc các hãng phải có tính năng này.
 
 ```java
+// Abstract Class: Chỉ định nghĩa khung sườn
+public abstract class MobileDevice {
+    // Phương thức trừu tượng: Không có thân hàm (body)
+    public abstract void takePhoto();
 
-public class IPhone extends Smartphone {
-    public void faceID() {
-        System.out.println("Mở khóa bằng khuôn mặt.");
+    public void call() {
+        System.out.println("Đang thực hiện cuộc gọi...");
     }
 }
 ```
 
-## 3. Tính đa hình (Polymorphism)
+## 3. Tính kế thừa (Inheritance)
+
+Nguyên tắc: "Đừng viết lại những gì đã có".
+
+iPhone 15 và Samsung S24 đều là điện thoại. Chúng kế thừa các đặc tính chung (nghe, gọi) từ lớp cha, giúp code ngắn gọn hơn.
+
+```java
+// iPhone kế thừa từ MobileDevice
+public class IPhone extends MobileDevice {
+    public void faceID() {
+        System.out.println("Mở khóa bằng khuôn mặt.");
+    }
+
+    // Bắt buộc phải hiện thực hóa hàm trừu tượng của cha
+    @Override
+    public void takePhoto() {
+        System.out.println("Chụp ảnh xóa phông chuẩn Apple!");
+    }
+}
+```
+
+## 4. Tính đa hình (Polymorphism)
 
 Nguyên tắc: "Một hành động, nhiều cách thể hiện".
 
-Cùng là hành động chupAnh(), nhưng iPhone chụp kiểu khác, Samsung chụp kiểu khác (xử lý AI).
+Cùng là hành động takePhoto(), nhưng nếu biến là iPhone thì chụp kiểu Apple, nếu là Samsung thì chụp kiểu Samsung.
 
 ```java
-@Override
-public void takePhoto() {
-    System.out.println("Chụp ảnh xóa phông chuẩn Apple!");
+public class Main {
+public static void main(String[] args) {
+// Biến tham chiếu là lớp Cha, nhưng đối tượng thực là lớp Con
+MobileDevice myPhone = new IPhone();
+
+        // Cùng 1 lệnh gọi, nhưng chạy code của IPhone
+        myPhone.takePhoto(); // Output: "Chụp ảnh xóa phông chuẩn Apple!"
+
+        myPhone.call(); // Dùng lại code của lớp Cha
+    }
+
 }
-
 ```
-
-## 4. Tính trừu tượng (Abstraction)
-
-Nguyên tắc: "Tập trung vào cái LÀM ĐƯỢC thay vì LÀM NHƯ THẾ NÀO".
-
-Khi bấm nút Home, bạn chỉ biết nó sẽ về màn hình chính, còn bên dưới nó gửi tín hiệu điện thế nào thì lập trình viên hệ thống lo. Interface trong Java chính là hiện thân của tính chất này.

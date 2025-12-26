@@ -9,11 +9,11 @@
     <lastBuildDate>Fri, 10 Nov 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Nâng cấp kỹ năng với 5 tính năng ES6 JavaScript cực chất</title>
+      <title>5 tính năng ES6 thay đổi cách bạn viết JavaScript mãi mãi</title>
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b7js-es6/</link>
       <pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b7js-es6/</guid>
-      <description>Đừng code như năm 2010 nữa! Hãy sử dụng Arrow Function, Destructuring để code ngắn gọn và &amp;rsquo;ngầu&amp;rsquo; hơn.</description>
+      <description>Tạm biệt &amp;lsquo;var&amp;rsquo;, tạm biệt nối chuỗi thủ công. Hãy cập nhật ngay Let/Const, Arrow Function và Destructuring để code đẳng cấp hơn.</description>
     </item>
   </channel>
 </rss>

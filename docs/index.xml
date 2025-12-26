@@ -9,53 +9,53 @@
     <lastBuildDate>Sun, 12 Nov 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Thao tác DOM: Biến trang web tĩnh thành động</title>
+      <title>Làm chủ DOM JavaScript: Biến giao diện tĩnh thành động</title>
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b9js-dom/</link>
       <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b9js-dom/</guid>
-      <description>Học cách dùng JavaScript để thay đổi màu sắc, nội dung HTML khi người dùng bấm nút.</description>
+      <description>DOM là gì? Học cách bắt sự kiện click, lấy dữ liệu từ ô Input và tạo tính năng Dark Mode &amp;lsquo;xịn sò&amp;rsquo; chỉ với vài dòng code.</description>
     </item>
     <item>
-      <title>Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async/Await</title>
+      <title>Tạm biệt Callback Hell: Xử lý Bất đồng bộ đỉnh cao với Async/Await</title>
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b8js-async-await/</link>
       <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b8js-async-await/</guid>
-      <description>Làm sao để JS đợi tải xong dữ liệu rồi mới chạy tiếp? Async/Await chính là câu trả lời thanh lịch nhất.</description>
+      <description>Tại sao JS đơn luồng mà vẫn làm được nhiều việc cùng lúc? Hướng dẫn làm chủ Async/Await và kỹ thuật Promise.all để tối ưu hiệu năng.</description>
     </item>
     <item>
-      <title>Nâng cấp kỹ năng với 5 tính năng ES6 JavaScript cực chất</title>
+      <title>5 tính năng ES6 thay đổi cách bạn viết JavaScript mãi mãi</title>
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b7js-es6/</link>
       <pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b7js-es6/</guid>
-      <description>Đừng code như năm 2010 nữa! Hãy sử dụng Arrow Function, Destructuring để code ngắn gọn và &amp;rsquo;ngầu&amp;rsquo; hơn.</description>
+      <description>Tạm biệt &amp;lsquo;var&amp;rsquo;, tạm biệt nối chuỗi thủ công. Hãy cập nhật ngay Let/Const, Arrow Function và Destructuring để code đẳng cấp hơn.</description>
     </item>
     <item>
-      <title>Giao tiếp với thế giới Web: Gửi HTTP Request trong Java</title>
+      <title>Gọi API trong Java: Từ GET cơ bản đến Async nâng cao</title>
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b6java-http-request/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b6java-http-request/</guid>
-      <description>Làm sao để Java lấy được dữ liệu thời tiết, tỷ giá tiền tệ từ các website khác? Hướng dẫn sử dụng HttpClient (Java 11+).</description>
+      <description>Quên HttpURLConnection đi! Đây là cách sử dụng HttpClient (Java 11) để gọi API lấy dữ liệu GitHub và gửi JSON chuyên nghiệp.</description>
     </item>
     <item>
-      <title>Java UDP: Tốc độ là tất cả (DatagramSocket)</title>
+      <title>Java UDP: Giao thức &#39;Bắn và Quên&#39; - Tốc độ là trên hết</title>
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b5java-udp/</link>
       <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b5java-udp/</guid>
-      <description>Tại sao xem bóng đá trực tuyến hay dùng UDP? Tìm hiểu về giao thức &amp;lsquo;bắn và quên&amp;rsquo; này.</description>
+      <description>Tại sao xem bóng đá trực tuyến hay Game FPS dùng UDP thay vì TCP? Tìm hiểu về DatagramSocket và sự khác biệt cốt lõi.</description>
     </item>
     <item>
-      <title>Xây dựng ứng dụng Chat Client-Server với Java Socket (TCP)</title>
+      <title>Lập trình mạng: Xây dựng Chat Client-Server 2 chiều với Java TCP</title>
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b4java-socket-tcp/</link>
       <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b4java-socket-tcp/</guid>
-      <description>Hướng dẫn từng bước tạo kết nối tin cậy, đảm bảo &amp;rsquo;tin nhắn gửi đi là phải tới nơi&amp;rsquo; với giao thức TCP.</description>
+      <description>Hướng dẫn tạo ứng dụng Chat Console tương tác liên tục. Server lắng nghe và phản hồi Client theo thời gian thực.</description>
     </item>
     <item>
-      <title>Nghệ thuật xử lý lỗi (Exception Handling): Đừng để App bị Crash!</title>
+      <title>Nghệ thuật xử lý lỗi (Exception Handling): Từ cơ bản đến Clean Code</title>
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b3java-exception/</link>
       <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b3java-exception/</guid>
-      <description>Try-Catch không chỉ để sửa lỗi, nó là cách bạn giao tiếp với người dùng khi có sự cố xảy ra.</description>
+      <description>Try-Catch không chỉ để sửa lỗi, nó là cách bạn giao tiếp với người dùng. Tìm hiểu về Try-with-resources và các sai lầm cần tránh.</description>
     </item>
     <item>
       <title>Bảng vàng Java Collections: Khi nào dùng List, Set hay Map?</title>

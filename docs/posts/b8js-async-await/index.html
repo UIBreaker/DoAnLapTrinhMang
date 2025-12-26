@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async/Await | Blog của Nhật Nam</title>
-<meta name="keywords" content="JavaScript, Async, Advance">
-<meta name="description" content="Làm sao để JS đợi tải xong dữ liệu rồi mới chạy tiếp? Async/Await chính là câu trả lời thanh lịch nhất.">
+<title>Tạm biệt Callback Hell: Xử lý Bất đồng bộ đỉnh cao với Async/Await | Blog của Nhật Nam</title>
+<meta name="keywords" content="JavaScript, Async, Advanced, ES7">
+<meta name="description" content="Tại sao JS đơn luồng mà vẫn làm được nhiều việc cùng lúc? Hướng dẫn làm chủ Async/Await và kỹ thuật Promise.all để tối ưu hiệu năng.">
 <meta name="author" content="">
 <link rel="canonical" href="https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b8js-async-await/">
 <link crossorigin="anonymous" href="/DoAnLapTrinhMang/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
@@ -72,8 +72,8 @@
 
 </script><meta property="og:url" content="https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b8js-async-await/">
   <meta property="og:site_name" content="Blog của Nhật Nam">
-  <meta property="og:title" content="Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async/Await">
-  <meta property="og:description" content="Làm sao để JS đợi tải xong dữ liệu rồi mới chạy tiếp? Async/Await chính là câu trả lời thanh lịch nhất.">
+  <meta property="og:title" content="Tạm biệt Callback Hell: Xử lý Bất đồng bộ đỉnh cao với Async/Await">
+  <meta property="og:description" content="Tại sao JS đơn luồng mà vẫn làm được nhiều việc cùng lúc? Hướng dẫn làm chủ Async/Await và kỹ thuật Promise.all để tối ưu hiệu năng.">
   <meta property="og:locale" content="vi-VN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -81,10 +81,11 @@
     <meta property="article:modified_time" content="2023-11-11T00:00:00+00:00">
     <meta property="article:tag" content="JavaScript">
     <meta property="article:tag" content="Async">
-    <meta property="article:tag" content="Advance">
+    <meta property="article:tag" content="Advanced">
+    <meta property="article:tag" content="ES7">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async/Await">
-<meta name="twitter:description" content="Làm sao để JS đợi tải xong dữ liệu rồi mới chạy tiếp? Async/Await chính là câu trả lời thanh lịch nhất.">
+<meta name="twitter:title" content="Tạm biệt Callback Hell: Xử lý Bất đồng bộ đỉnh cao với Async/Await">
+<meta name="twitter:description" content="Tại sao JS đơn luồng mà vẫn làm được nhiều việc cùng lúc? Hướng dẫn làm chủ Async/Await và kỹ thuật Promise.all để tối ưu hiệu năng.">
 
 
 <script type="application/ld+json">
@@ -101,7 +102,7 @@
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async/Await",
+      "name": "Tạm biệt Callback Hell: Xử lý Bất đồng bộ đỉnh cao với Async/Await",
       "item": "https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b8js-async-await/"
     }
   ]
@@ -111,14 +112,14 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async/Await",
-  "name": "Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async\/Await",
-  "description": "Làm sao để JS đợi tải xong dữ liệu rồi mới chạy tiếp? Async/Await chính là câu trả lời thanh lịch nhất.",
+  "headline": "Tạm biệt Callback Hell: Xử lý Bất đồng bộ đỉnh cao với Async/Await",
+  "name": "Tạm biệt Callback Hell: Xử lý Bất đồng bộ đỉnh cao với Async\/Await",
+  "description": "Tại sao JS đơn luồng mà vẫn làm được nhiều việc cùng lúc? Hướng dẫn làm chủ Async/Await và kỹ thuật Promise.all để tối ưu hiệu năng.",
   "keywords": [
-    "JavaScript", "Async", "Advance"
+    "JavaScript", "Async", "Advanced", "ES7"
   ],
-  "articleBody": "Bài 8: js-async-await.md Giải quyết bài toán bất đồng bộ - Vấn đề đau đầu nhất của JS.\nJavaScript là ngôn ngữ đơn luồng (single-threaded). Nếu không xử lý khéo, việc tải một file nặng sẽ làm treo cả trang web. ## Cách ngày xưa (Promise) Nhìn khá rối với `then` và `catch`. ```javascript fetch( \"[https://api.github.com/users/UIBreaker](https://api.github.com/users/UIBreaker)\" ) .then((res) =\u003e res.json()) .then((data) =\u003e console.log(data)) .catch((err) =\u003e console.error(err)); ``` Cách hiện đại (Async/Await) Code nhìn tuần tự như chạy từ trên xuống dưới, rất dễ đọc.\nasync function getUserProfile() { try { console.log(\"Đang tải dữ liệu...\"); // Từ khóa 'await' bắt JS phải đợi dòng này chạy xong let response = await fetch('[https://api.github.com/users/UIBreaker](https://api.github.com/users/UIBreaker)'); let data = await response.json(); console.log(\"Tên GitHub:\", data.login); } catch (error) { console.log(\"Có lỗi rồi:\", error); } } getUserProfile(); ",
-  "wordCount" : "130",
+  "articleBody": "JavaScript là ngôn ngữ đơn luồng (Single-threaded), nghĩa là nó chỉ có một tay để làm việc. Nếu bạn bắt nó tải một file nặng (mất 5 giây) theo cách thông thường, toàn bộ trang web sẽ bị “đơ” trong 5 giây đó.\nĐể giải quyết, chúng ta có Bất đồng bộ (Asynchronous). Hãy cùng xem sự tiến hóa của nó.\n1. Thời kỳ đồ đá: Callback Hell Ngày xưa, code lồng nhau chằng chịt như hình tam giác, cực kỳ khó đọc và bảo trì.\n// Ác mộng mang tên Callback getData(function (a) { getMoreData(a, function (b) { getMoreData(b, function (c) { getMoreData(c, function (d) { console.log(d); }); }); }); }); 2. Thời kỳ trung cổ: Promise (ES6) Đỡ hơn chút, nhưng vẫn còn rườm rà với .then() và .catch().\nfetch(\"[https://api.github.com/users/UIBreaker](https://api.github.com/users/UIBreaker)\") .then((res) =\u003e res.json()) .then((data) =\u003e console.log(data)) .catch((err) =\u003e console.error(err)); 3. Thời kỳ hiện đại: Async/Await (ES7) Đây là cú pháp “thanh lịch” nhất. Nó biến code bất đồng bộ nhìn y hệt như code đồng bộ (tuần tự từ trên xuống dưới), rất dễ hiểu.\nCú pháp chuẩn async: Khai báo hàm này có xử lý bất đồng bộ.\nawait: “Tạm dừng” code tại dòng này để đợi kết quả trả về, sau đó mới chạy dòng tiếp theo.\nasync function getUserProfile() { try { console.log(\"⏳ Đang tải dữ liệu...\"); // JS sẽ \"đợi\" ở dòng này cho đến khi fetch xong const response = await fetch(\"[https://api.github.com/users/UIBreaker](https://api.github.com/users/UIBreaker)\"); const data = await response.json(); // Chỉ chạy khi dòng trên đã xong console.log(\"✅ Tên GitHub:\", data.login); console.log(\"✅ Số Repo:\", data.public_repos); } catch (error) { // Dùng try-catch truyền thống để bắt lỗi cực gọn console.error(\"❌ Có lỗi rồi:\", error); } } getUserProfile(); 4. Pro Tip: Tăng tốc độ với Promise.all Giả sử bạn cần lấy thông tin của 3 người dùng. Nếu dùng await từng người thì sẽ mất: 1s + 1s + 1s = 3s. Thay vào đó, hãy dùng Promise.all để chạy song song cả 3 cùng lúc -\u003e Chỉ mất 1s.\nasync function getAllUsers() { console.time(\"Thời gian tải\"); const p1 = fetch(\"[https://api.github.com/users/UIBreaker](https://api.github.com/users/UIBreaker)\"); const p2 = fetch(\"[https://api.github.com/users/google](https://api.github.com/users/google)\"); const p3 = fetch(\"[https://api.github.com/users/facebook](https://api.github.com/users/facebook)\"); // Chạy song song 3 request, đợi tất cả cùng xong const results = await Promise.all([p1, p2, p3]); console.timeEnd(\"Thời gian tải\"); // Kết quả sẽ cực nhanh! console.log(\"Đã tải xong 3 users.\"); } Kết luận Async/Await không phải là phép thuật, nó chỉ là “lớp vỏ ngọt ngào” (Syntactic Sugar) bọc lấy Promise. Nhưng nhờ nó, code của chúng ta sạch đẹp và logic hơn gấp 10 lần.\n",
+  "wordCount" : "421",
   "inLanguage": "en",
   "datePublished": "2023-11-11T00:00:00Z",
   "dateModified": "2023-11-11T00:00:00Z",
@@ -172,6 +173,11 @@
                 </a>
             </li>
             <li>
+                <a href="https://UIBreaker.github.io/DoAnLapTrinhMang/about" title="Giới thiệu">
+                    <span>Giới thiệu</span>
+                </a>
+            </li>
+            <li>
                 <a href="https://UIBreaker.github.io/DoAnLapTrinhMang/posts" title="Bài Viết">
                     <span>Bài Viết</span>
                 </a>
@@ -185,9 +191,9 @@
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://UIBreaker.github.io/DoAnLapTrinhMang/">Home</a>&nbsp;»&nbsp;<a href="https://UIBreaker.github.io/DoAnLapTrinhMang/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
-      Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async/Await
+      Tạm biệt Callback Hell: Xử lý Bất đồng bộ đỉnh cao với Async/Await
     </h1>
-    <div class="post-meta"><span title='2023-11-11 00:00:00 +0000 UTC'>November 11, 2023</span>&nbsp;·&nbsp;<span>1 min</span>
+    <div class="post-meta"><span title='2023-11-11 00:00:00 +0000 UTC'>November 11, 2023</span>&nbsp;·&nbsp;<span>2 min</span>
 
 </div>
   </header> <div class="toc">
@@ -198,49 +204,83 @@
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#b%c3%a0i-8-js-async-awaitmd" aria-label="Bài 8: js-async-await.md">Bài 8: js-async-await.md</a></li>
+                    <a href="#1-th%e1%bb%9di-k%e1%bb%b3-%c4%91%e1%bb%93-%c4%91%c3%a1-callback-hell" aria-label="1. Thời kỳ đồ đá: Callback Hell">1. Thời kỳ đồ đá: Callback Hell</a></li>
                 <li>
-                    <a href="#c%c3%a1ch-hi%e1%bb%87n-%c4%91%e1%ba%a1i-asyncawait" aria-label="Cách hiện đại (Async/Await)">Cách hiện đại (Async/Await)</a>
+                    <a href="#2-th%e1%bb%9di-k%e1%bb%b3-trung-c%e1%bb%95-promise-es6" aria-label="2. Thời kỳ trung cổ: Promise (ES6)">2. Thời kỳ trung cổ: Promise (ES6)</a></li>
+                <li>
+                    <a href="#3-th%e1%bb%9di-k%e1%bb%b3-hi%e1%bb%87n-%c4%91%e1%ba%a1i-asyncawait-es7" aria-label="3. Thời kỳ hiện đại: Async/Await (ES7)">3. Thời kỳ hiện đại: Async/Await (ES7)</a></li>
+                <li>
+                    <a href="#4-pro-tip-t%c4%83ng-t%e1%bb%91c-%c4%91%e1%bb%99-v%e1%bb%9bi-promiseall" aria-label="4. Pro Tip: Tăng tốc độ với Promise.all">4. Pro Tip: Tăng tốc độ với Promise.all</a></li>
+                <li>
+                    <a href="#k%e1%ba%bft-lu%e1%ba%adn" aria-label="Kết luận">Kết luận</a>
                 </li>
             </ul>
         </div>
     </details>
 </div>
 
-  <div class="post-content"><h2 id="bài-8-js-async-awaitmd">Bài 8: <code>js-async-await.md</code><a hidden class="anchor" aria-hidden="true" href="#bài-8-js-async-awaitmd">#</a></h2>
-<p><em>Giải quyết bài toán bất đồng bộ - Vấn đề đau đầu nhất của JS.</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>JavaScript là ngôn ngữ đơn luồng (single-threaded). Nếu không xử lý khéo, việc tải một file nặng sẽ làm treo cả trang web.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## Cách ngày xưa (Promise)
-</span></span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Nhìn khá rối với <span style="color:#e6db74">`then`</span> và <span style="color:#e6db74">`catch`</span>.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">```javascript
-</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">fetch</span>(
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;[https://api.github.com/users/UIBreaker](https://api.github.com/users/UIBreaker)&#34;</span>
-</span></span><span style="display:flex;"><span>)
-</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">res</span>) =&gt; <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">json</span>())
-</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">data</span>) =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>))
-</span></span><span style="display:flex;"><span>  .<span style="color:#66d9ef">catch</span>((<span style="color:#a6e22e">err</span>) =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">err</span>));
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
-</span></span></code></pre></div><h2 id="cách-hiện-đại-asyncawait">Cách hiện đại (Async/Await)<a hidden class="anchor" aria-hidden="true" href="#cách-hiện-đại-asyncawait">#</a></h2>
-<p>Code nhìn tuần tự như chạy từ trên xuống dưới, rất dễ đọc.</p>
+  <div class="post-content"><p>JavaScript là ngôn ngữ đơn luồng (Single-threaded), nghĩa là nó chỉ có một tay để làm việc. Nếu bạn bắt nó tải một file nặng (mất 5 giây) theo cách thông thường, toàn bộ trang web sẽ bị &ldquo;đơ&rdquo; trong 5 giây đó.</p>
+<p>Để giải quyết, chúng ta có <strong>Bất đồng bộ (Asynchronous)</strong>. Hãy cùng xem sự tiến hóa của nó.</p>
+<h2 id="1-thời-kỳ-đồ-đá-callback-hell">1. Thời kỳ đồ đá: Callback Hell<a hidden class="anchor" aria-hidden="true" href="#1-thời-kỳ-đồ-đá-callback-hell">#</a></h2>
+<p>Ngày xưa, code lồng nhau chằng chịt như hình tam giác, cực kỳ khó đọc và bảo trì.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Ác mộng mang tên Callback
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">getData</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">a</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">getMoreData</span>(<span style="color:#a6e22e">a</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">b</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">getMoreData</span>(<span style="color:#a6e22e">b</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">c</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">getMoreData</span>(<span style="color:#a6e22e">c</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">d</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">d</span>);
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="2-thời-kỳ-trung-cổ-promise-es6">2. Thời kỳ trung cổ: Promise (ES6)<a hidden class="anchor" aria-hidden="true" href="#2-thời-kỳ-trung-cổ-promise-es6">#</a></h2>
+<p>Đỡ hơn chút, nhưng vẫn còn rườm rà với .then() và .catch().</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>fetch(<span style="color:#e6db74">&#34;[https://api.github.com/users/UIBreaker](https://api.github.com/users/UIBreaker)&#34;</span>)
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>((res) <span style="color:#f92672">=&gt;</span> res.<span style="color:#a6e22e">json</span>())
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>((data) <span style="color:#f92672">=&gt;</span> console.<span style="color:#a6e22e">log</span>(data))
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">catch</span>((err) <span style="color:#f92672">=&gt;</span> console.<span style="color:#a6e22e">error</span>(err));
+</span></span></code></pre></div><h2 id="3-thời-kỳ-hiện-đại-asyncawait-es7">3. Thời kỳ hiện đại: Async/Await (ES7)<a hidden class="anchor" aria-hidden="true" href="#3-thời-kỳ-hiện-đại-asyncawait-es7">#</a></h2>
+<p>Đây là cú pháp &ldquo;thanh lịch&rdquo; nhất. Nó biến code bất đồng bộ nhìn y hệt như code đồng bộ (tuần tự từ trên xuống dưới), rất dễ hiểu.</p>
+<p>Cú pháp chuẩn
+async: Khai báo hàm này có xử lý bất đồng bộ.</p>
+<p>await: &ldquo;Tạm dừng&rdquo; code tại dòng này để đợi kết quả trả về, sau đó mới chạy dòng tiếp theo.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>async function <span style="color:#a6e22e">getUserProfile</span>() {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
-</span></span><span style="display:flex;"><span>        console.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Đang tải dữ liệu...&#34;</span>);
+</span></span><span style="display:flex;"><span>        console.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;⏳ Đang tải dữ liệu...&#34;</span>);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Từ khóa &#39;await&#39; bắt JS phải đợi dòng này chạy xong</span>
-</span></span><span style="display:flex;"><span>        let response <span style="color:#f92672">=</span> await <span style="color:#a6e22e">fetch</span>(<span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#f92672">[</span>https:<span style="color:#75715e">//api.github.com/users/UIBreaker](https://api.github.com/users/UIBreaker)&#39;);</span>
-</span></span><span style="display:flex;"><span>        let data <span style="color:#f92672">=</span> await response.<span style="color:#a6e22e">json</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// JS sẽ &#34;đợi&#34; ở dòng này cho đến khi fetch xong</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> response <span style="color:#f92672">=</span> await <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#34;[https://api.github.com/users/UIBreaker](https://api.github.com/users/UIBreaker)&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> data <span style="color:#f92672">=</span> await response.<span style="color:#a6e22e">json</span>();
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        console.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Tên GitHub:&#34;</span>, data.<span style="color:#a6e22e">login</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Chỉ chạy khi dòng trên đã xong</span>
+</span></span><span style="display:flex;"><span>        console.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;✅ Tên GitHub:&#34;</span>, data.<span style="color:#a6e22e">login</span>);
+</span></span><span style="display:flex;"><span>        console.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;✅ Số Repo:&#34;</span>, data.<span style="color:#a6e22e">public_repos</span>);
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (error) {
-</span></span><span style="display:flex;"><span>        console.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Có lỗi rồi:&#34;</span>, error);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Dùng try-catch truyền thống để bắt lỗi cực gọn</span>
+</span></span><span style="display:flex;"><span>        console.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;❌ Có lỗi rồi:&#34;</span>, error);
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>getUserProfile();
-</span></span></code></pre></div>
+</span></span></code></pre></div><h2 id="4-pro-tip-tăng-tốc-độ-với-promiseall">4. Pro Tip: Tăng tốc độ với Promise.all<a hidden class="anchor" aria-hidden="true" href="#4-pro-tip-tăng-tốc-độ-với-promiseall">#</a></h2>
+<p>Giả sử bạn cần lấy thông tin của 3 người dùng. Nếu dùng await từng người thì sẽ mất: 1s + 1s + 1s = 3s. Thay vào đó, hãy dùng Promise.all để chạy song song cả 3 cùng lúc -&gt; Chỉ mất 1s.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>async function <span style="color:#a6e22e">getAllUsers</span>() {
+</span></span><span style="display:flex;"><span>    console.<span style="color:#a6e22e">time</span>(<span style="color:#e6db74">&#34;Thời gian tải&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> p1 <span style="color:#f92672">=</span> fetch(<span style="color:#e6db74">&#34;[https://api.github.com/users/UIBreaker](https://api.github.com/users/UIBreaker)&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> p2 <span style="color:#f92672">=</span> fetch(<span style="color:#e6db74">&#34;[https://api.github.com/users/google](https://api.github.com/users/google)&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> p3 <span style="color:#f92672">=</span> fetch(<span style="color:#e6db74">&#34;[https://api.github.com/users/facebook](https://api.github.com/users/facebook)&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Chạy song song 3 request, đợi tất cả cùng xong</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> results <span style="color:#f92672">=</span> await Promise.<span style="color:#a6e22e">all</span>(<span style="color:#f92672">[</span>p1, p2, p3<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    console.<span style="color:#a6e22e">timeEnd</span>(<span style="color:#e6db74">&#34;Thời gian tải&#34;</span>); <span style="color:#75715e">// Kết quả sẽ cực nhanh!</span>
+</span></span><span style="display:flex;"><span>    console.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Đã tải xong 3 users.&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="kết-luận">Kết luận<a hidden class="anchor" aria-hidden="true" href="#kết-luận">#</a></h2>
+<p>Async/Await không phải là phép thuật, nó chỉ là &ldquo;lớp vỏ ngọt ngào&rdquo; (Syntactic Sugar) bọc lấy Promise. Nhưng nhờ nó, code của chúng ta sạch đẹp và logic hơn gấp 10 lần.</p>
+
 
   </div>
 
@@ -248,26 +288,27 @@
     <ul class="post-tags">
       <li><a href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/javascript/">JavaScript</a></li>
       <li><a href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/async/">Async</a></li>
-      <li><a href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/advance/">Advance</a></li>
+      <li><a href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/advanced/">Advanced</a></li>
+      <li><a href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/es7/">ES7</a></li>
     </ul>
 <nav class="paginav">
   <a class="prev" href="https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b9js-dom/">
     <span class="title">« Prev</span>
     <br>
-    <span>Thao tác DOM: Biến trang web tĩnh thành động</span>
+    <span>Làm chủ DOM JavaScript: Biến giao diện tĩnh thành động</span>
   </a>
   <a class="next" href="https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b7js-es6/">
     <span class="title">Next »</span>
     <br>
-    <span>Nâng cấp kỹ năng với 5 tính năng ES6 JavaScript cực chất</span>
+    <span>5 tính năng ES6 thay đổi cách bạn viết JavaScript mãi mãi</span>
   </a>
 </nav>
 
 
 <ul class="share-buttons">
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async/Await on x"
-            href="https://x.com/intent/tweet/?text=T%e1%ba%a1m%20bi%e1%bb%87t%20Callback%20Hell%3a%20X%e1%bb%ad%20l%c3%bd%20b%e1%ba%a5t%20%c4%91%e1%bb%93ng%20b%e1%bb%99%20v%e1%bb%9bi%20Async%2fAwait&amp;url=https%3a%2f%2fUIBreaker.github.io%2fDoAnLapTrinhMang%2fposts%2fb8js-async-await%2f&amp;hashtags=JavaScript%2cAsync%2cAdvance">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Tạm biệt Callback Hell: Xử lý Bất đồng bộ đỉnh cao với Async/Await on x"
+            href="https://x.com/intent/tweet/?text=T%e1%ba%a1m%20bi%e1%bb%87t%20Callback%20Hell%3a%20X%e1%bb%ad%20l%c3%bd%20B%e1%ba%a5t%20%c4%91%e1%bb%93ng%20b%e1%bb%99%20%c4%91%e1%bb%89nh%20cao%20v%e1%bb%9bi%20Async%2fAwait&amp;url=https%3a%2f%2fUIBreaker.github.io%2fDoAnLapTrinhMang%2fposts%2fb8js-async-await%2f&amp;hashtags=JavaScript%2cAsync%2cAdvanced%2cES7">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
@@ -275,8 +316,8 @@
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async/Await on linkedin"
-            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fUIBreaker.github.io%2fDoAnLapTrinhMang%2fposts%2fb8js-async-await%2f&amp;title=T%e1%ba%a1m%20bi%e1%bb%87t%20Callback%20Hell%3a%20X%e1%bb%ad%20l%c3%bd%20b%e1%ba%a5t%20%c4%91%e1%bb%93ng%20b%e1%bb%99%20v%e1%bb%9bi%20Async%2fAwait&amp;summary=T%e1%ba%a1m%20bi%e1%bb%87t%20Callback%20Hell%3a%20X%e1%bb%ad%20l%c3%bd%20b%e1%ba%a5t%20%c4%91%e1%bb%93ng%20b%e1%bb%99%20v%e1%bb%9bi%20Async%2fAwait&amp;source=https%3a%2f%2fUIBreaker.github.io%2fDoAnLapTrinhMang%2fposts%2fb8js-async-await%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Tạm biệt Callback Hell: Xử lý Bất đồng bộ đỉnh cao với Async/Await on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fUIBreaker.github.io%2fDoAnLapTrinhMang%2fposts%2fb8js-async-await%2f&amp;title=T%e1%ba%a1m%20bi%e1%bb%87t%20Callback%20Hell%3a%20X%e1%bb%ad%20l%c3%bd%20B%e1%ba%a5t%20%c4%91%e1%bb%93ng%20b%e1%bb%99%20%c4%91%e1%bb%89nh%20cao%20v%e1%bb%9bi%20Async%2fAwait&amp;summary=T%e1%ba%a1m%20bi%e1%bb%87t%20Callback%20Hell%3a%20X%e1%bb%ad%20l%c3%bd%20B%e1%ba%a5t%20%c4%91%e1%bb%93ng%20b%e1%bb%99%20%c4%91%e1%bb%89nh%20cao%20v%e1%bb%9bi%20Async%2fAwait&amp;source=https%3a%2f%2fUIBreaker.github.io%2fDoAnLapTrinhMang%2fposts%2fb8js-async-await%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
@@ -284,8 +325,8 @@
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async/Await on reddit"
-            href="https://reddit.com/submit?url=https%3a%2f%2fUIBreaker.github.io%2fDoAnLapTrinhMang%2fposts%2fb8js-async-await%2f&title=T%e1%ba%a1m%20bi%e1%bb%87t%20Callback%20Hell%3a%20X%e1%bb%ad%20l%c3%bd%20b%e1%ba%a5t%20%c4%91%e1%bb%93ng%20b%e1%bb%99%20v%e1%bb%9bi%20Async%2fAwait">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Tạm biệt Callback Hell: Xử lý Bất đồng bộ đỉnh cao với Async/Await on reddit"
+            href="https://reddit.com/submit?url=https%3a%2f%2fUIBreaker.github.io%2fDoAnLapTrinhMang%2fposts%2fb8js-async-await%2f&title=T%e1%ba%a1m%20bi%e1%bb%87t%20Callback%20Hell%3a%20X%e1%bb%ad%20l%c3%bd%20B%e1%ba%a5t%20%c4%91%e1%bb%93ng%20b%e1%bb%99%20%c4%91%e1%bb%89nh%20cao%20v%e1%bb%9bi%20Async%2fAwait">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
@@ -293,7 +334,7 @@
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async/Await on facebook"
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Tạm biệt Callback Hell: Xử lý Bất đồng bộ đỉnh cao với Async/Await on facebook"
             href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fUIBreaker.github.io%2fDoAnLapTrinhMang%2fposts%2fb8js-async-await%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
@@ -302,8 +343,8 @@
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async/Await on whatsapp"
-            href="https://api.whatsapp.com/send?text=T%e1%ba%a1m%20bi%e1%bb%87t%20Callback%20Hell%3a%20X%e1%bb%ad%20l%c3%bd%20b%e1%ba%a5t%20%c4%91%e1%bb%93ng%20b%e1%bb%99%20v%e1%bb%9bi%20Async%2fAwait%20-%20https%3a%2f%2fUIBreaker.github.io%2fDoAnLapTrinhMang%2fposts%2fb8js-async-await%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Tạm biệt Callback Hell: Xử lý Bất đồng bộ đỉnh cao với Async/Await on whatsapp"
+            href="https://api.whatsapp.com/send?text=T%e1%ba%a1m%20bi%e1%bb%87t%20Callback%20Hell%3a%20X%e1%bb%ad%20l%c3%bd%20B%e1%ba%a5t%20%c4%91%e1%bb%93ng%20b%e1%bb%99%20%c4%91%e1%bb%89nh%20cao%20v%e1%bb%9bi%20Async%2fAwait%20-%20https%3a%2f%2fUIBreaker.github.io%2fDoAnLapTrinhMang%2fposts%2fb8js-async-await%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
@@ -311,8 +352,8 @@
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async/Await on telegram"
-            href="https://telegram.me/share/url?text=T%e1%ba%a1m%20bi%e1%bb%87t%20Callback%20Hell%3a%20X%e1%bb%ad%20l%c3%bd%20b%e1%ba%a5t%20%c4%91%e1%bb%93ng%20b%e1%bb%99%20v%e1%bb%9bi%20Async%2fAwait&amp;url=https%3a%2f%2fUIBreaker.github.io%2fDoAnLapTrinhMang%2fposts%2fb8js-async-await%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Tạm biệt Callback Hell: Xử lý Bất đồng bộ đỉnh cao với Async/Await on telegram"
+            href="https://telegram.me/share/url?text=T%e1%ba%a1m%20bi%e1%bb%87t%20Callback%20Hell%3a%20X%e1%bb%ad%20l%c3%bd%20B%e1%ba%a5t%20%c4%91%e1%bb%93ng%20b%e1%bb%99%20%c4%91%e1%bb%89nh%20cao%20v%e1%bb%9bi%20Async%2fAwait&amp;url=https%3a%2f%2fUIBreaker.github.io%2fDoAnLapTrinhMang%2fposts%2fb8js-async-await%2f">
             <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
@@ -320,8 +361,8 @@
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async/Await on ycombinator"
-            href="https://news.ycombinator.com/submitlink?t=T%e1%ba%a1m%20bi%e1%bb%87t%20Callback%20Hell%3a%20X%e1%bb%ad%20l%c3%bd%20b%e1%ba%a5t%20%c4%91%e1%bb%93ng%20b%e1%bb%99%20v%e1%bb%9bi%20Async%2fAwait&u=https%3a%2f%2fUIBreaker.github.io%2fDoAnLapTrinhMang%2fposts%2fb8js-async-await%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Tạm biệt Callback Hell: Xử lý Bất đồng bộ đỉnh cao với Async/Await on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=T%e1%ba%a1m%20bi%e1%bb%87t%20Callback%20Hell%3a%20X%e1%bb%ad%20l%c3%bd%20B%e1%ba%a5t%20%c4%91%e1%bb%93ng%20b%e1%bb%99%20%c4%91%e1%bb%89nh%20cao%20v%e1%bb%9bi%20Async%2fAwait&u=https%3a%2f%2fUIBreaker.github.io%2fDoAnLapTrinhMang%2fposts%2fb8js-async-await%2f">
             <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
                 xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
                 <path

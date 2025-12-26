@@ -1,46 +1,111 @@
 ---
-title: "Thao tác DOM: Biến trang web tĩnh thành động"
+title: "Làm chủ DOM JavaScript: Biến giao diện tĩnh thành động"
 date: 2023-11-12
 draft: false
-tags: ["JavaScript", "DOM", "Frontend"]
-summary: "Học cách dùng JavaScript để thay đổi màu sắc, nội dung HTML khi người dùng bấm nút."
+tags: ["JavaScript", "DOM", "Frontend", "Interactive"]
+summary: "DOM là gì? Học cách bắt sự kiện click, lấy dữ liệu từ ô Input và tạo tính năng Dark Mode 'xịn sò' chỉ với vài dòng code."
 ---
 
-## Bài 9: `js-dom.md`
+HTML/CSS tạo ra một trang web đẹp, nhưng nó "chết" (tĩnh). Để trang web "sống" (động) và phản hồi lại người dùng, chúng ta cần **DOM (Document Object Model)**.
 
-_Bài cuối cùng, tạo tương tác thực tế._
+Hãy coi DOM như một cái cây, mỗi thẻ HTML là một nhánh cây mà JavaScript có thể bẻ cong, tô màu hoặc cắt tỉa tùy ý.
 
-````markdown
-DOM (Document Object Model) là cây cầu nối giữa JavaScript và giao diện HTML.
+## 1. Quy trình 3 bước thao tác DOM
 
-## Ví dụ: Làm nút bấm đổi màu nền
+Mọi tính năng JS đều tuân theo quy tắc: **Chọn -> Nghe -> Hành động**.
 
-Hãy tưởng tượng bạn có 1 nút bấm trong HTML: `<button id="btnClick">Đổi màu ngay</button>`
+1.  **Chọn (Select):** Tìm phần tử HTML cần xử lý.
+2.  **Nghe (Listen):** Đợi người dùng làm gì đó (Click, Gõ phím, Scroll...).
+3.  **Hành động (Act):** Thay đổi màu sắc, nội dung, ẩn/hiện...
 
-Dưới đây là đoạn script để "thổi hồn" cho nó:
+## 2. Ví dụ 1: Tính năng Dark Mode (Chuẩn Clean Code)
 
-```javascript
-// 1. Truy tìm phần tử
-const button = document.getElementById("btnClick");
+Thay vì sửa từng dòng CSS thủ công, các Dev chuyên nghiệp sẽ thêm/bớt một class CSS.
+
+**HTML:**
+
+```html
+<body class="light-mode">
+  <button id="btnToggle">Bật chế độ tối</button>
+</body>
+```
+
+## CSS (Định nghĩa sẵn):
+
+```java
+.dark-mode {
+    background-color: #2c3e50;
+    color: white;
+}
+```
+
+## JavaScript:
+
+```java
+// 1. Chọn phần tử
+const btn = document.querySelector('#btnToggle');
 const body = document.body;
 
-// 2. Lắng nghe sự kiện Click
-button.addEventListener("click", () => {
-  // 3. Thực hiện hành động
-  body.style.backgroundColor = "#2c3e50"; // Đổi nền sang màu tối
-  body.style.color = "white"; // Chữ màu trắng
+// 2. Lắng nghe Click
+btn.addEventListener('click', () => {
+    // 3. Hành động: Tự động thêm hoặc xóa class 'dark-mode'
+    body.classList.toggle('dark-mode');
 
-  alert("Đã kích hoạt Dark Mode thủ công!");
+    // Kiểm tra xem đang ở chế độ nào để đổi tên nút
+    if (body.classList.contains('dark-mode')) {
+        btn.innerText = "Về giao diện sáng";
+    } else {
+        btn.innerText = "Bật chế độ tối";
+    }
 });
 ```
-````
 
-## Các lệnh DOM phổ biến
+## 3. Ví dụ 2: Lấy dữ liệu từ ô Input
 
-document.getElementById('id'): Chọn theo ID.
+Làm sao để lấy những gì người dùng gõ vào và hiển thị lời chào?
 
-document.querySelector('.class'): Chọn theo Class CSS.
+HTML:
 
-element.innerHTML = 'Mới': Thay đổi nội dung HTML.
+```java
+<input type="text" id="nameInput" placeholder="Nhập tên bạn...">
+<button id="btnSayHi">Chào</button>
+<p id="resultText"></p>
+```
 
-element.classList.add('active'): Thêm class CSS động.
+JavaScript:
+
+```java
+const input = document.querySelector('#nameInput');
+const btnHi = document.querySelector('#btnSayHi');
+const result = document.querySelector('#resultText');
+
+btnHi.addEventListener('click', () => {
+    // Lấy giá trị (value) từ ô input
+    const name = input.value;
+
+    // Kiểm tra rỗng
+    if (name === "") {
+        alert("Vui lòng nhập tên!");
+        return;
+    }
+
+    // Gán nội dung text vào thẻ p
+    result.innerText = `Xin chào, ${name}! Chúc bạn một ngày vui vẻ.`;
+    result.style.color = "green"; // Đổi màu chữ kết quả
+});
+```
+
+## 4. Cheat Sheet: Các lệnh DOM hay dùng nhất
+
+| Nhóm          | Lệnh                                   | Tác dụng                         |
+| :------------ | :------------------------------------- | :------------------------------- |
+| **Truy vấn**  | `document.getElementById('id')`        | Chọn theo ID (Nhanh nhất)        |
+|               | `document.querySelector('.class')`     | Chọn theo CSS Selector (Đa năng) |
+| **Nội dung**  | `element.innerText = 'abc'`            | Sửa nội dung chữ                 |
+|               | `element.innerHTML = '<b>abc</b>'`     | Sửa nội dung HTML                |
+|               | `input.value`                          | Lấy giá trị ô nhập liệu          |
+| **Giao diện** | `element.style.color = 'red'`          | Sửa CSS trực tiếp                |
+|               | `element.classList.add('active')`      | Thêm class CSS                   |
+|               | `element.classList.toggle('active')`   | Bật/Tắt class CSS                |
+| **Sự kiện**   | `btn.addEventListener('click', ...)`   | Bắt sự kiện Click                |
+|               | `input.addEventListener('input', ...)` | Bắt sự kiện khi đang gõ          |

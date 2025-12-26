@@ -9,11 +9,11 @@
     <lastBuildDate>Fri, 27 Oct 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/clean-code/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Nghệ thuật xử lý lỗi (Exception Handling): Đừng để App bị Crash!</title>
+      <title>Nghệ thuật xử lý lỗi (Exception Handling): Từ cơ bản đến Clean Code</title>
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b3java-exception/</link>
       <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b3java-exception/</guid>
-      <description>Try-Catch không chỉ để sửa lỗi, nó là cách bạn giao tiếp với người dùng khi có sự cố xảy ra.</description>
+      <description>Try-Catch không chỉ để sửa lỗi, nó là cách bạn giao tiếp với người dùng. Tìm hiểu về Try-with-resources và các sai lầm cần tránh.</description>
     </item>
   </channel>
 </rss>

@@ -9,11 +9,11 @@
     <lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/http/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Giao tiếp với thế giới Web: Gửi HTTP Request trong Java</title>
+      <title>Gọi API trong Java: Từ GET cơ bản đến Async nâng cao</title>
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b6java-http-request/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b6java-http-request/</guid>
-      <description>Làm sao để Java lấy được dữ liệu thời tiết, tỷ giá tiền tệ từ các website khác? Hướng dẫn sử dụng HttpClient (Java 11+).</description>
+      <description>Quên HttpURLConnection đi! Đây là cách sử dụng HttpClient (Java 11) để gọi API lấy dữ liệu GitHub và gửi JSON chuyên nghiệp.</description>
     </item>
   </channel>
 </rss>

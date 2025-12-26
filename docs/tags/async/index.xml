@@ -9,11 +9,11 @@
     <lastBuildDate>Sat, 11 Nov 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/async/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Tạm biệt Callback Hell: Xử lý bất đồng bộ với Async/Await</title>
+      <title>Tạm biệt Callback Hell: Xử lý Bất đồng bộ đỉnh cao với Async/Await</title>
       <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b8js-async-await/</link>
       <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b8js-async-await/</guid>
-      <description>Làm sao để JS đợi tải xong dữ liệu rồi mới chạy tiếp? Async/Await chính là câu trả lời thanh lịch nhất.</description>
+      <description>Tại sao JS đơn luồng mà vẫn làm được nhiều việc cùng lúc? Hướng dẫn làm chủ Async/Await và kỹ thuật Promise.all để tối ưu hiệu năng.</description>
     </item>
   </channel>
 </rss>

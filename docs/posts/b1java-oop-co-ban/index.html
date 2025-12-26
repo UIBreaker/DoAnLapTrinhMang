@@ -117,8 +117,8 @@
   "keywords": [
     "Java", "OOP", "Kiến Thức Nền Tảng"
   ],
-  "articleBody": "Lập trình hướng đối tượng (OOP) không chỉ là code, nó là tư duy mô phỏng thế giới thực. Để hiểu rõ 4 tính chất này, hãy tưởng tượng chúng ta đang thiết kế một chiếc Smartphone.\n1. Tính đóng gói (Encapsulation) Nguyên tắc: “Giấu việc cần giấu, khoe việc cần khoe”.\nBạn không cần biết bên trong pin điện thoại đấu dây thế nào, bạn chỉ cần cắm sạc là xong. Trong Java, chúng ta dùng private để che giấu dữ liệu và public để cung cấp tính năng.\npublic class Smartphone { private int batteryLevel; // Người dùng không thể tự chỉnh pin thành 1000% được! public void charge() { if (batteryLevel \u003c 100) { batteryLevel++; System.out.println(\"Đang sạc... Pin: \" + batteryLevel + \"%\"); } } } 2. Tính kế thừa (Inheritance) Nguyên tắc: “Đừng viết lại những gì đã có”.\niPhone 15 và Samsung S24 đều là Smartphone. Chúng kế thừa các đặc tính chung (nghe, gọi) nhưng có thương hiệu khác nhau.\npublic class IPhone extends Smartphone { public void faceID() { System.out.println(\"Mở khóa bằng khuôn mặt.\"); } } 3. Tính đa hình (Polymorphism) Nguyên tắc: “Một hành động, nhiều cách thể hiện”.\nCùng là hành động chupAnh(), nhưng iPhone chụp kiểu khác, Samsung chụp kiểu khác (xử lý AI).\n@Override public void takePhoto() { System.out.println(\"Chụp ảnh xóa phông chuẩn Apple!\"); } 4. Tính trừu tượng (Abstraction) Nguyên tắc: “Tập trung vào cái LÀM ĐƯỢC thay vì LÀM NHƯ THẾ NÀO”.\nKhi bấm nút Home, bạn chỉ biết nó sẽ về màn hình chính, còn bên dưới nó gửi tín hiệu điện thế nào thì lập trình viên hệ thống lo. Interface trong Java chính là hiện thân của tính chất này.\n",
-  "wordCount" : "286",
+  "articleBody": "Lập trình hướng đối tượng (OOP) không chỉ là code, nó là tư duy mô phỏng thế giới thực. Để hiểu rõ 4 tính chất này, hãy tưởng tượng chúng ta đang thiết kế một chiếc Smartphone.\n1. Tính đóng gói (Encapsulation) Nguyên tắc: “Giấu việc cần giấu, khoe việc cần khoe”.\nBạn không cần biết bên trong pin điện thoại đấu dây thế nào, bạn chỉ cần cắm sạc là xong. Trong Java, chúng ta dùng private để che giấu dữ liệu và public để cung cấp tính năng.\npublic class Smartphone { // Dữ liệu được bảo vệ (Private) private int batteryLevel; // Phương thức công khai (Public) để tương tác public void charge() { if (batteryLevel \u003c 100) { batteryLevel++; System.out.println(\"Đang sạc... Pin: \" + batteryLevel + \"%\"); } } } 2. Tính trừu tượng (Abstraction) (Mình đưa mục này lên trước để làm nền tảng cho Kế thừa và Đa hình nhé)\nNguyên tắc: “Tập trung vào cái LÀM ĐƯỢC thay vì LÀM NHƯ THẾ NÀO”.\nTất cả Smartphone đều phải có chức năng chupAnh(). Nhưng chụp thế nào (xử lý AI, chỉnh sáng…) thì iPhone làm kiểu khác, Samsung làm kiểu khác. Ta dùng abstract để ép buộc các hãng phải có tính năng này.\n// Abstract Class: Chỉ định nghĩa khung sườn public abstract class MobileDevice { // Phương thức trừu tượng: Không có thân hàm (body) public abstract void takePhoto(); public void call() { System.out.println(\"Đang thực hiện cuộc gọi...\"); } } 3. Tính kế thừa (Inheritance) Nguyên tắc: “Đừng viết lại những gì đã có”.\niPhone 15 và Samsung S24 đều là điện thoại. Chúng kế thừa các đặc tính chung (nghe, gọi) từ lớp cha, giúp code ngắn gọn hơn.\n// iPhone kế thừa từ MobileDevice public class IPhone extends MobileDevice { public void faceID() { System.out.println(\"Mở khóa bằng khuôn mặt.\"); } // Bắt buộc phải hiện thực hóa hàm trừu tượng của cha @Override public void takePhoto() { System.out.println(\"Chụp ảnh xóa phông chuẩn Apple!\"); } } 4. Tính đa hình (Polymorphism) Nguyên tắc: “Một hành động, nhiều cách thể hiện”.\nCùng là hành động takePhoto(), nhưng nếu biến là iPhone thì chụp kiểu Apple, nếu là Samsung thì chụp kiểu Samsung.\npublic class Main { public static void main(String[] args) { // Biến tham chiếu là lớp Cha, nhưng đối tượng thực là lớp Con MobileDevice myPhone = new IPhone(); // Cùng 1 lệnh gọi, nhưng chạy code của IPhone myPhone.takePhoto(); // Output: \"Chụp ảnh xóa phông chuẩn Apple!\" myPhone.call(); // Dùng lại code của lớp Cha } } ",
+  "wordCount" : "428",
   "inLanguage": "en",
   "datePublished": "2023-10-25T00:00:00Z",
   "dateModified": "2023-10-25T00:00:00Z",
@@ -172,6 +172,11 @@
                 </a>
             </li>
             <li>
+                <a href="https://UIBreaker.github.io/DoAnLapTrinhMang/about" title="Giới thiệu">
+                    <span>Giới thiệu</span>
+                </a>
+            </li>
+            <li>
                 <a href="https://UIBreaker.github.io/DoAnLapTrinhMang/posts" title="Bài Viết">
                     <span>Bài Viết</span>
                 </a>
@@ -187,7 +192,7 @@
     <h1 class="post-title entry-hint-parent">
       Hiểu thấu đáo 4 tính chất của OOP qua ví dụ chiếc Smartphone
     </h1>
-    <div class="post-meta"><span title='2023-10-25 00:00:00 +0000 UTC'>October 25, 2023</span>&nbsp;·&nbsp;<span>2 min</span>
+    <div class="post-meta"><span title='2023-10-25 00:00:00 +0000 UTC'>October 25, 2023</span>&nbsp;·&nbsp;<span>3 min</span>
 
 </div>
   </header> <div class="toc">
@@ -200,11 +205,11 @@
                 <li>
                     <a href="#1-t%c3%adnh-%c4%91%c3%b3ng-g%c3%b3i-encapsulation" aria-label="1. Tính đóng gói (Encapsulation)">1. Tính đóng gói (Encapsulation)</a></li>
                 <li>
-                    <a href="#2-t%c3%adnh-k%e1%ba%bf-th%e1%bb%aba-inheritance" aria-label="2. Tính kế thừa (Inheritance)">2. Tính kế thừa (Inheritance)</a></li>
+                    <a href="#2-t%c3%adnh-tr%e1%bb%abu-t%c6%b0%e1%bb%a3ng-abstraction" aria-label="2. Tính trừu tượng (Abstraction)">2. Tính trừu tượng (Abstraction)</a></li>
                 <li>
-                    <a href="#3-t%c3%adnh-%c4%91a-h%c3%acnh-polymorphism" aria-label="3. Tính đa hình (Polymorphism)">3. Tính đa hình (Polymorphism)</a></li>
+                    <a href="#3-t%c3%adnh-k%e1%ba%bf-th%e1%bb%aba-inheritance" aria-label="3. Tính kế thừa (Inheritance)">3. Tính kế thừa (Inheritance)</a></li>
                 <li>
-                    <a href="#4-t%c3%adnh-tr%e1%bb%abu-t%c6%b0%e1%bb%a3ng-abstraction" aria-label="4. Tính trừu tượng (Abstraction)">4. Tính trừu tượng (Abstraction)</a>
+                    <a href="#4-t%c3%adnh-%c4%91a-h%c3%acnh-polymorphism" aria-label="4. Tính đa hình (Polymorphism)">4. Tính đa hình (Polymorphism)</a>
                 </li>
             </ul>
         </div>
@@ -216,8 +221,10 @@
 <p><em>Nguyên tắc: &ldquo;Giấu việc cần giấu, khoe việc cần khoe&rdquo;.</em></p>
 <p>Bạn không cần biết bên trong pin điện thoại đấu dây thế nào, bạn chỉ cần cắm sạc là xong. Trong Java, chúng ta dùng <code>private</code> để che giấu dữ liệu và <code>public</code> để cung cấp tính năng.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Smartphone</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> batteryLevel; <span style="color:#75715e">// Người dùng không thể tự chỉnh pin thành 1000% được!</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Dữ liệu được bảo vệ (Private)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> batteryLevel;
 </span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Phương thức công khai (Public) để tương tác</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">charge</span>() {
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (batteryLevel <span style="color:#f92672">&lt;</span> 100) {
 </span></span><span style="display:flex;"><span>            batteryLevel<span style="color:#f92672">++</span>;
@@ -225,26 +232,50 @@
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="2-tính-kế-thừa-inheritance">2. Tính kế thừa (Inheritance)<a hidden class="anchor" aria-hidden="true" href="#2-tính-kế-thừa-inheritance">#</a></h2>
+</span></span></code></pre></div><h2 id="2-tính-trừu-tượng-abstraction">2. Tính trừu tượng (Abstraction)<a hidden class="anchor" aria-hidden="true" href="#2-tính-trừu-tượng-abstraction">#</a></h2>
+<p>(Mình đưa mục này lên trước để làm nền tảng cho Kế thừa và Đa hình nhé)</p>
+<p>Nguyên tắc: &ldquo;Tập trung vào cái LÀM ĐƯỢC thay vì LÀM NHƯ THẾ NÀO&rdquo;.</p>
+<p>Tất cả Smartphone đều phải có chức năng chupAnh(). Nhưng chụp thế nào (xử lý AI, chỉnh sáng&hellip;) thì iPhone làm kiểu khác, Samsung làm kiểu khác. Ta dùng abstract để ép buộc các hãng phải có tính năng này.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Abstract Class: Chỉ định nghĩa khung sườn</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MobileDevice</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Phương thức trừu tượng: Không có thân hàm (body)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">takePhoto</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">call</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Đang thực hiện cuộc gọi...&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="3-tính-kế-thừa-inheritance">3. Tính kế thừa (Inheritance)<a hidden class="anchor" aria-hidden="true" href="#3-tính-kế-thừa-inheritance">#</a></h2>
 <p>Nguyên tắc: &ldquo;Đừng viết lại những gì đã có&rdquo;.</p>
-<p>iPhone 15 và Samsung S24 đều là Smartphone. Chúng kế thừa các đặc tính chung (nghe, gọi) nhưng có thương hiệu khác nhau.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">IPhone</span> <span style="color:#66d9ef">extends</span> Smartphone {
+<p>iPhone 15 và Samsung S24 đều là điện thoại. Chúng kế thừa các đặc tính chung (nghe, gọi) từ lớp cha, giúp code ngắn gọn hơn.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// iPhone kế thừa từ MobileDevice</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">IPhone</span> <span style="color:#66d9ef">extends</span> MobileDevice {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">faceID</span>() {
 </span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Mở khóa bằng khuôn mặt.&#34;</span>);
 </span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Bắt buộc phải hiện thực hóa hàm trừu tượng của cha</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">takePhoto</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Chụp ảnh xóa phông chuẩn Apple!&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="3-tính-đa-hình-polymorphism">3. Tính đa hình (Polymorphism)<a hidden class="anchor" aria-hidden="true" href="#3-tính-đa-hình-polymorphism">#</a></h2>
+</span></span></code></pre></div><h2 id="4-tính-đa-hình-polymorphism">4. Tính đa hình (Polymorphism)<a hidden class="anchor" aria-hidden="true" href="#4-tính-đa-hình-polymorphism">#</a></h2>
 <p>Nguyên tắc: &ldquo;Một hành động, nhiều cách thể hiện&rdquo;.</p>
-<p>Cùng là hành động chupAnh(), nhưng iPhone chụp kiểu khác, Samsung chụp kiểu khác (xử lý AI).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Override</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">takePhoto</span>() {
-</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Chụp ảnh xóa phông chuẩn Apple!&#34;</span>);
+<p>Cùng là hành động takePhoto(), nhưng nếu biến là iPhone thì chụp kiểu Apple, nếu là Samsung thì chụp kiểu Samsung.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Biến tham chiếu là lớp Cha, nhưng đối tượng thực là lớp Con</span>
+</span></span><span style="display:flex;"><span>MobileDevice myPhone <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> IPhone();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Cùng 1 lệnh gọi, nhưng chạy code của IPhone</span>
+</span></span><span style="display:flex;"><span>        myPhone.<span style="color:#a6e22e">takePhoto</span>(); <span style="color:#75715e">// Output: &#34;Chụp ảnh xóa phông chuẩn Apple!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        myPhone.<span style="color:#a6e22e">call</span>(); <span style="color:#75715e">// Dùng lại code của lớp Cha</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="4-tính-trừu-tượng-abstraction">4. Tính trừu tượng (Abstraction)<a hidden class="anchor" aria-hidden="true" href="#4-tính-trừu-tượng-abstraction">#</a></h2>
-<p>Nguyên tắc: &ldquo;Tập trung vào cái LÀM ĐƯỢC thay vì LÀM NHƯ THẾ NÀO&rdquo;.</p>
-<p>Khi bấm nút Home, bạn chỉ biết nó sẽ về màn hình chính, còn bên dưới nó gửi tín hiệu điện thế nào thì lập trình viên hệ thống lo. Interface trong Java chính là hiện thân của tính chất này.</p>
-
+</span></span></code></pre></div>
 
   </div>
 

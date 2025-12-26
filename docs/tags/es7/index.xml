@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ES7 on Blog của Nhật Nam</title>
+    <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/es7/</link>
+    <description>Recent content in ES7 on Blog của Nhật Nam</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-VN</language>
+    <lastBuildDate>Sat, 11 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/es7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tạm biệt Callback Hell: Xử lý Bất đồng bộ đỉnh cao với Async/Await</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b8js-async-await/</link>
+      <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/posts/b8js-async-await/</guid>
+      <description>Tại sao JS đơn luồng mà vẫn làm được nhiều việc cùng lúc? Hướng dẫn làm chủ Async/Await và kỹ thuật Promise.all để tối ưu hiệu năng.</description>
+    </item>
+  </channel>
+</rss>
