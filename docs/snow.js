@@ -224,3 +224,28 @@ function fillSearch(keyword) {
     searchInput.focus();
   }
 }
+document.addEventListener("DOMContentLoaded", function () {
+  // ... (Code cũ giữ nguyên) ...
+
+  /* --- TÍNH NĂNG: CLICK AVATAR ĐỂ HIỆN SOCIAL --- */
+  const profileImg = document.querySelector(".profile img");
+  const profileContainer = document.querySelector(".profile");
+
+  if (profileImg && profileContainer) {
+    profileImg.addEventListener("click", function (e) {
+      // Ngăn chặn hành vi mặc định (nếu có)
+      e.preventDefault();
+      e.stopPropagation();
+
+      // Bật/Tắt class 'active' để hiện/ẩn icon
+      profileContainer.classList.toggle("active");
+    });
+
+    // Bấm ra ngoài thì tắt đi cho gọn
+    document.addEventListener("click", function (e) {
+      if (!profileContainer.contains(e.target)) {
+        profileContainer.classList.remove("active");
+      }
+    });
+  }
+});
