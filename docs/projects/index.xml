@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blog của Nhật Nam</title>
+    <link>https://UIBreaker.github.io/DoAnLapTrinhMang/projects/</link>
+    <description>Recent content on Blog của Nhật Nam</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-VN</language>
+    <lastBuildDate>Sun, 01 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>App Nghe Nhạc Boxmusic</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/projects/app-nghe-nhac/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/projects/app-nghe-nhac/</guid>
+      <description>Hệ thống nghe nhạc hoàn chỉnh với kiến trúc Microservices: App Flutter, API .NET và Database NoSQL.</description>
+    </item>
+    <item>
+      <title>Phần Mềm Nhận Dạng Chữ (OCR)</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/projects/phan-mem-ocr/</link>
+      <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/projects/phan-mem-ocr/</guid>
+      <description>Tool tự động trích xuất văn bản từ hình ảnh scan hoặc file PDF với độ chính xác cao.</description>
+    </item>
+    <item>
+      <title>App Mobile Bán Giày Dép</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/projects/app-ban-giay/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/projects/app-ban-giay/</guid>
+      <description>Ứng dụng mua sắm giày dép đa nền tảng với hiệu năng cao, giao diện mượt mà.</description>
+    </item>
+    <item>
+      <title>Sàn thương mại</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/projects/website-ban-hang/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/projects/website-ban-hang/</guid>
+      <description>Trang web thương mại điện tử cơ bản tích hợp đăng nhập Google và quản lý giỏ hàng realtime.</description>
+    </item>
+  </channel>
+</rss>

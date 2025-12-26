@@ -1,63 +1,112 @@
 baseURL = 'https://UIBreaker.github.io/DoAnLapTrinhMang/'
-publishDir = "docs"
 languageCode = 'vi-VN'
 title = 'Blog của Nhật Nam'
 theme = 'PaperMod'
-author = "Nguyễn Vũ Nhật Nam"
+publishDir = "docs" # Cấu hình folder build để đẩy lên Github Pages
 
+# --- CẤU HÌNH OUTPUT (BẮT BUỘC ĐỂ SEARCH HOẠT ĐỘNG) ---
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
 
 [params]
-  defaultTheme = "auto"
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowToc = true
-  
+    author = "Nguyễn Vũ Nhật Nam"
+    defaultTheme = "auto"
 
-[params.assets]
-    disableFingerprinting = true
-    # Giữ nguyên tên file, không cần thêm đường dẫn nào cả
-    customCSS = ["custom.css"]
-    customJS = ["snow.js"]
-
-
-  [params.profileMode]
-    enabled = true
-    title = "Nguyễn Vũ Nhật Nam"
-    # Slogan ngắn gọn, đúng chất sinh viên HUTECH sắp ra trường
-    subtitle = "Sinh viên Năm 4 CNTT - HUTECH | Chuyên trị Java & Network"
-    imageUrl = "https://github.com/UIBreaker.png"
-    imageTitle = "Avatar"
-    imageWidth = 120
-    imageHeight = 120
-
-    [[params.socialIcons]]
-      name = "github"
-      url = "https://github.com/UIBreaker"
+    # --- CẤU HÌNH HIỂN THỊ BÀI VIẾT ---
+    ShowReadingTime = true
+    ShowShareButtons = true
+    ShowPostNavLinks = true
+    ShowBreadCrumbs = true
+    ShowCodeCopyButtons = true
+    ShowToc = true
+    copyright = "© 2025 Nguyễn Vũ Nhật Nam - Đồ án Lập Trình Mạng"
     
-    # Thêm Facebook/Email để nhà tuyển dụng liên hệ (nếu muốn)
-    # [[params.socialIcons]]
-    #   name = "email"
-    #   url = "mailto:nam@example.com"
+    # --- TỐI ƯU TỐC ĐỘ (GIẢM LAG KHI NGHE NHẠC) ---
+    enableInstantClick = true
 
+    # --- QUAN TRỌNG: FAVICON (ICON TRÊN TAB TRÌNH DUYỆT) ---
+    # File ảnh phải nằm ở: static/favicon.png
+    favicon = "favicon.png" 
+
+    # --- LOGO (HIỂN THỊ GÓC TRÁI MENU) ---
+    [params.logo]
+        icon = "favicon.png"
+        iconHeight = 35
+        text = "Blog của Nhật Nam"
+
+    # --- FILE CSS VÀ JS TÙY CHỈNH ---
+    [params.assets]
+        disableFingerprinting = true
+        customCSS = ["custom.css"]
+        customJS = ["snow.js"]
+
+    # --- CẤU HÌNH PROFILE (TRANG CHỦ) ---
+    [params.profileMode]
+        enabled = true
+        title = "Nguyễn Vũ Nhật Nam"
+        subtitle = "Sinh viên Năm 4 CNTT - HUTECH | Chuyên trị Java & Network"
+        imageUrl = "https://github.com/UIBreaker.png" # Tự lấy Avatar Github
+        imageTitle = "Avatar"
+        imageWidth = 120
+        imageHeight = 120
+
+        # --- MẠNG XÃ HỘI ---
+        [[params.socialIcons]]
+            name = "github"
+            url = "https://github.com/UIBreaker"
+
+        [[params.socialIcons]]
+            name = "facebook"
+            url = "https://www.facebook.com/nhat.nam.305603/" 
+
+        [[params.socialIcons]]
+            name = "email"
+            url = "mailto:nhatnam171217@gmail.com"
+
+        # Các link giải trí (Bạn có thể sửa lại sau)
+        [[params.socialIcons]]
+            name = "linkedin"
+            url = "https://vi.y8.com/" 
+
+        [[params.socialIcons]]
+            name = "garena"
+            url = "https://napthe.vn/" 
+
+    # --- CẤU HÌNH TÌM KIẾM (FUSE.JS) ---
+    [params.fuseOpts]
+        isCaseSensitive = false
+        score = 0.5
+        minMatchCharLength = 2
+        keys = ["title", "permalink", "summary", "content"]
+
+# --- THANH MENU ĐIỀU HƯỚNG ---
 [menu]
-  [[menu.main]]
-    identifier = "home"
-    name = "Trang Chủ"
-    url = "/"
-    weight = 10
-  
-  # --- THÊM MENU GIỚI THIỆU Ở ĐÂY ---
-  [[menu.main]]
-    identifier = "about"
-    name = "Giới thiệu" # Nút này sẽ dẫn vào bài viết chi tiết
-    url = "/about"
-    weight = 15
+    [[menu.main]]
+        identifier = "home"
+        name = "Trang Chủ"
+        url = "/"
+        weight = 10
+    
+    [[menu.main]]
+        identifier = "about"
+        name = "Giới thiệu"
+        url = "/about"
+        weight = 15
 
-  [[menu.main]]
-    identifier = "blog"
-    name = "Bài Viết"
-    url = "/posts"
-    weight = 20
+    [[menu.main]]
+        identifier = "projects"
+        name = "Dự Án"
+        url = "/projects"
+        weight = 20
+
+    [[menu.main]]
+        identifier = "blog"
+        name = "Bài Viết"
+        url = "/posts"
+        weight = 30
+        
+    [[menu.main]]
+        identifier = "search"
+        name = "Tìm Kiếm"  
+        url = "/search"
+        weight = 40

@@ -1,4 +1,4 @@
-/* static/custom.css - PHIÊN BẢN ULTIMATE V2 (ICED GLASS) */
+/* static/custom.css - PHIÊN BẢN ULTIMATE V3 (ĐẬM ĐÀ & SẠCH SẼ) */
 
 /* =========================================
    1. CẤU HÌNH CỐT LÕI & BẢNG MÀU
@@ -11,11 +11,11 @@
   --xmas-white: #ffffff;
   --xmas-offwhite: #e0e0e0;
 
-  /* Màu nền kính băng (Iced Glass) - Quan trọng cho độ dễ đọc */
-  /* Màu đen mờ 60% + Tăng bão hòa để làm rực màu ảnh nền bên dưới */
-  --glass-bg: rgba(20, 20, 20, 0.65);
+  /* --- CHỈNH SỬA QUAN TRỌNG: Tăng độ đậm nền kính --- */
+  /* Đã tăng từ 0.65 lên 0.85 để dễ đọc chữ hơn */
+  --glass-bg: rgba(15, 15, 20, 0.85);
   --glass-border: rgba(255, 255, 255, 0.15);
-  --glass-blur: blur(16px) saturate(180%);
+  --glass-blur: blur(12px); /* Giảm blur nhẹ cho đỡ nặng máy */
 
   /* Ghi đè màu mặc định của Theme */
   --primary: var(--xmas-red) !important;
@@ -27,10 +27,12 @@
 html {
   scroll-behavior: smooth;
 }
+
 /* Ẩn nút chuyển đổi giao diện Sáng/Tối */
 #theme-toggle {
   display: none !important;
 }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
@@ -76,35 +78,34 @@ body {
 }
 
 /* =========================================
-   2. HỆ THỐNG BACKGROUND KÉP (QUAN TRỌNG NHẤT)
+   2. HỆ THỐNG BACKGROUND KÉP
    ========================================= */
 
 /* Cấu hình chung cho nền */
 body {
   min-height: 100vh;
-  background-color: #1a1a2e; /* Màu nền tối dự phòng */
-  background-attachment: fixed; /* Tạo hiệu ứng chiều sâu 3D khi cuộn */
+  background-color: #1a1a2e;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* Hiệu ứng chuyển màu nền mượt mà trong 0.8 giây */
   transition: background-image 0.8s ease-in-out;
   color: var(--xmas-offwhite) !important;
 }
 
-/* --- CHẾ ĐỘ 1: TRANG CHỦ (NGOÀI TRỜI NHÌN VÀO) --- */
+/* --- CHẾ ĐỘ 1: TRANG CHỦ (NGOÀI TRỜI) --- */
 body.outdoor-theme {
-  /* Lớp phủ đen mờ 40% lên ảnh để làm nổi nội dung */
+  /* Lớp phủ tối màu 40% */
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("images/snow-cabin-pixel.png") !important;
 }
 
-/* --- CHẾ ĐỘ 2: TRANG BÀI VIẾT (Ở TRONG NHÀ) --- */
+/* --- CHẾ ĐỘ 2: TRANG BÀI VIẾT (TRONG NHÀ) --- */
 body.indoor-theme {
-  /* Lớp phủ đen mờ 70% để tối hơn, tập trung đọc bài */
+  /* Lớp phủ tối màu 70% -> Giúp đọc bài dễ hơn */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("images/fireplace-pixel.png") !important;
-  background-position: center bottom; /* Căn lò sưởi xuống đáy */
+  background-position: center bottom;
 }
 
 /* Fix lỗi theme PaperMod */
@@ -113,62 +114,64 @@ body.indoor-theme {
 }
 
 /* =========================================
-   3. HIỆU ỨNG KÍNH BĂNG (ICED GLASSMORPHISM)
+   3. HIỆU ỨNG KÍNH BĂNG (ICED GLASS)
    ========================================= */
 
-/* Áp dụng cho các thẻ bài viết ở trang chủ và khung nội dung bài viết */
 .post-entry,
 .post-single,
 .profile,
 .terms-tags {
-  background-color: var(--glass-bg) !important;
-  backdrop-filter: var(--glass-blur); /* Làm mờ và rực màu nền phía sau */
-  -webkit-backdrop-filter: var(--glass-blur); /* Hỗ trợ Safari */
-  border: 1px solid var(--glass-border); /* Viền kính sáng nhẹ */
-  border-radius: 16px; /* Bo góc mềm mại */
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* Bóng đổ tạo chiều sâu */
+  background-color: var(--glass-bg) !important; /* Dùng màu đã chỉnh đậm hơn */
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); /* Tăng bóng đổ cho nổi */
   padding: 25px;
   margin-bottom: 30px;
   transition: all 0.3s ease;
 }
 
-/* Hiệu ứng khi di chuột vào thẻ bài viết ở trang chủ */
 .post-entry:hover {
-  transform: translateY(-5px) scale(1.02); /* Nổi lên và phóng to nhẹ */
-  background-color: rgba(40, 40, 40, 0.75) !important; /* Sáng hơn một chút */
-  border-color: var(--xmas-green); /* Viền chuyển màu xanh */
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(78, 205, 196, 0.2); /* Glow nhẹ */
+  transform: translateY(-5px) scale(1.02);
+  background-color: rgba(
+    40,
+    40,
+    40,
+    0.95
+  ) !important; /* Gần như đen đặc khi hover */
+  border-color: var(--xmas-green);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(78, 205, 196, 0.2);
 }
 
 /* =========================================
-   4. TỐI ƯU TYPOGRAPHY (DỄ ĐỌC)
+   4. TỐI ƯU TYPOGRAPHY
    ========================================= */
 
-/* Tiêu đề màu trắng sáng */
 h1,
 h2,
 h3,
 h4,
 .entry-title,
 .page-title {
-  color: var(--xmas-white) !important;
+  color: var(--xmas-red) !important; /* Fix lại biến màu */
   font-weight: 700;
   letter-spacing: 0.5px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Bóng chữ giúp tách biệt khỏi nền */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8); /* Bóng chữ đậm hơn */
 }
 
-/* Nội dung bài viết */
 .post-content,
 .entry-content {
   color: var(--xmas-offwhite) !important;
-  line-height: 1.8; /* Giãn dòng thoáng */
+  line-height: 1.8;
   font-size: 1.05rem;
+  font-weight: 400; /* Chữ dày vừa phải */
 }
 
-/* Hiệu ứng Link gạch chân Gradient */
+/* Link Gradient */
 .entry-title a,
 .post-content a {
-  color: var(--xmas-white) !important;
+  color: var(--xmas-red) !important; /* Fix lại biến màu */
   text-decoration: none;
   background-image: linear-gradient(
     to right,
@@ -187,10 +190,10 @@ h4,
 }
 
 /* =========================================
-   5. HEADER & CÁC THÀNH PHẦN KHÁC
+   5. HEADER & COMPONENTS
    ========================================= */
 
-/* Thanh kẹo ngọt chạy (Animated Candy Cane) */
+/* Candy Cane Bar */
 @keyframes candyFlow {
   0% {
     background-position: 0 0;
@@ -219,7 +222,6 @@ body::before {
   box-shadow: 0 2px 10px rgba(255, 107, 107, 0.5);
 }
 
-/* Menu trong suốt */
 .header {
   background: transparent !important;
   border: none !important;
@@ -230,11 +232,11 @@ body::before {
   margin-top: 15px;
 }
 
-/* Avatar xoay và phát sáng */
+/* Avatar Profile */
 .profile img {
   border: 3px solid var(--xmas-red);
   box-shadow: 0 0 25px rgba(255, 107, 107, 0.6);
-  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); /* Hiệu ứng nảy */
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .profile img:hover {
   transform: rotate(360deg) scale(1.1);
@@ -242,7 +244,7 @@ body::before {
   box-shadow: 0 0 40px rgba(78, 205, 196, 0.8);
 }
 
-/* Nút bấm (Buttons) */
+/* Buttons */
 button,
 .button {
   background: rgba(78, 205, 196, 0.1) !important;
@@ -261,14 +263,14 @@ button:hover,
   transform: translateY(-3px);
 }
 
-/* Bảng biểu (Table) */
+/* Table */
 .post-content table {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 12px;
   overflow: hidden;
 }
 .post-content table th {
-  background-color: rgba(45, 106, 79, 0.8);
+  background-color: rgba(45, 106, 79, 0.9);
   color: #fff;
 }
 .post-content table td,
@@ -276,9 +278,7 @@ button:hover,
   border-color: var(--glass-border);
 }
 
-/* =========================================
-   6. ANIMATION NỘI DUNG (KHÔNG LAG)
-   ========================================= */
+/* Animation */
 .main {
   animation: fadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
@@ -291,4 +291,410 @@ button:hover,
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* =========================================
+   STYLE THANH TÌM KIẾM TRONG MENU (DARK PILL)
+   ========================================= */
+
+/* Tắt hiệu ứng gạch chân (Rainbow) của menu thường đối với nút này */
+#menu li:has(a[href*="search"]) {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* =========================================
+   11. GLOBAL HOVER EFFECTS
+   ========================================= */
+
+#menu .menu-item a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Social Icons */
+.social-icons a {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.social-icons a:hover {
+  transform: translateY(-5px) scale(1.2);
+}
+.social-icons a:hover svg {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+}
+
+/* Màu icon */
+.social-icons a[href*="facebook"]:hover {
+  color: #1877f2 !important;
+}
+.social-icons a[href*="garena"]:hover {
+  color: #ff0000 !important;
+}
+.social-icons a[href*="email"]:hover {
+  color: #1fcf5f !important;
+}
+.social-icons a[href*="github"]:hover {
+  color: #f0f6fc !important;
+}
+
+/* Buttons & Tags */
+button,
+.button,
+.tags a {
+  transition: all 0.3s ease !important;
+  position: relative;
+  top: 0;
+}
+button:hover,
+.button:hover,
+.tags a:hover {
+  top: -3px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: var(--xmas-green) !important;
+  color: #000 !important;
+  border-color: var(--xmas-green) !important;
+}
+
+/* =========================================
+   13. HIỆU ỨNG LOGO RAINBOW
+   ========================================= */
+.logo a {
+  font-weight: 800;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(#ff6b6b) !important;
+}
+.logo a:hover {
+  background: linear-gradient(
+    to right,
+    var(--xmas-red) 0%,
+    var(--xmas-gold) 50%,
+    var(--xmas-green) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: rainbowMove 2s linear infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 107, 107, 0.6));
+  transform: scale(1.05);
+  display: inline-block;
+}
+@keyframes rainbowMove {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Menu Rainbow Hover */
+#menu li:hover a {
+  background: linear-gradient(
+    to right,
+    var(--xmas-red) 0%,
+    var(--xmas-gold) 50%,
+    var(--xmas-green) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: rainbowMove 2s linear infinite;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
+  text-shadow: none !important;
+}
+
+/* =========================================
+   14. WIDGET PHÁT NHẠC (ĐÃ DỌN DẸP SẠCH SẼ)
+   ========================================= */
+
+#music-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#music-disk {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Viền sáng nhẹ */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  background-color: transparent; /* XÓA MÀU ĐỎ DEBUG */
+  object-fit: cover;
+  animation: spinDisk 5s linear infinite;
+  animation-play-state: paused;
+}
+
+#music-container.playing #music-disk {
+  animation-play-state: running;
+  box-shadow: 0 0 20px var(--xmas-gold);
+  border-color: var(--xmas-gold);
+}
+
+#music-container:hover {
+  transform: scale(1.1);
+}
+
+@keyframes spinDisk {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #music-disk {
+    width: 45px;
+    height: 45px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+/* =========================================
+   15. ĐIỀU CHỈNH VỊ TRÍ NÚT SCROLL TO TOP
+   ========================================= */
+
+#top-link {
+  /* Tính toán vị trí: 
+       20px (lề dưới đĩa nhạc) + 60px (chiều cao đĩa) + 20px (khoảng cách an toàn) 
+       = 100px */
+  bottom: 100px !important;
+  right: 28px !important; /* Căn giữa theo trục dọc với đĩa nhạc */
+
+  /* Trang trí lại nút cho hợp theme Giáng sinh */
+  background: var(--xmas-red) !important; /* Nền đỏ */
+  border: 1px solid var(--xmas-gold); /* Viền vàng */
+  border-radius: 50%; /* Bo tròn xoe */
+
+  /* Kích thước nút */
+  width: 45px;
+  height: 45px;
+
+  /* Căn icon mũi tên vào giữa */
+  display: flex; /* Mặc định PaperMod ẩn, khi cuộn mới hiện (flex giúp căn giữa) */
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  z-index: 9000; /* Thấp hơn đĩa nhạc một chút */
+}
+
+/* Hiệu ứng khi di chuột vào nút cuộn */
+#top-link:hover {
+  background: var(--xmas-green) !important; /* Chuyển xanh */
+  transform: translateY(-5px); /* Nảy lên */
+  opacity: 1;
+  box-shadow: 0 0 15px var(--xmas-green);
+}
+
+/* Icon mũi tên bên trong */
+#top-link svg {
+  width: 20px;
+  height: 20px;
+  fill: white; /* Mũi tên màu trắng */
+}
+
+/* --- Responsive trên điện thoại --- */
+@media screen and (max-width: 768px) {
+  #top-link {
+    bottom: 80px !important; /* Thấp hơn chút vì đĩa nhạc trên mobile đã thu nhỏ */
+    right: 18px !important;
+    width: 35px;
+    height: 35px;
+  }
+}
+/* /////////////////////////////////////////////////////////////////////// */
+/* =========================================
+   17. LAYOUT DẠNG LƯỚI CHO TRANG DỰ ÁN
+   ========================================= */
+
+/* Chỉ áp dụng khi đường dẫn có chữ 'projects' */
+/* Lưu ý: Để cái này chạy, ta cần mẹo nhỏ ở JS hoặc CSS selector thông minh */
+/* Ở đây ta dùng CSS selector dựa trên tiêu đề trang hoặc cấu trúc */
+
+/* Cách đơn giản nhất: Hack layout main cho trang dự án */
+/* Chúng ta sẽ dùng JS ở bước sau để thêm class 'project-page' vào body */
+
+body.project-page .main {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Chia 2 cột đều nhau */
+  gap: 25px; /* Khoảng cách giữa các ô */
+  max-width: 1200px; /* Mở rộng chiều ngang cho thoáng */
+}
+
+/* Trên điện thoại thì quay về 1 cột */
+@media screen and (max-width: 768px) {
+  body.project-page .main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Ẩn bớt phần tóm tắt dài dòng, chỉ hiện Tags và Nút bấm cho gọn */
+body.project-page .entry-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Chỉ hiện tối đa 3 dòng chữ */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+/* =========================================
+   18. CÂN BẰNG LƯỚI DỰ ÁN (EQUAL HEIGHT GRID)
+   ========================================= */
+
+/* 1. Thiết lập Grid 2 cột đều nhau */
+body.project-page .main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cột tỉ lệ 1:1 */
+  gap: 30px; /* Khoảng cách giữa các ô */
+  align-items: stretch; /* Kéo giãn các ô cho bằng chiều cao nhau */
+}
+
+/* 2. Cấu hình thẻ Card (Post Entry) */
+body.project-page .post-entry {
+  /* Biến thẻ thành Flex container dọc */
+  display: flex;
+  flex-direction: column;
+  /* Chiều cao 100% để nó tự căng theo ô lưới cao nhất */
+  height: 100%;
+  /* Reset margin và padding để căn chỉnh thủ công */
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+  overflow: hidden; /* Để bo góc ảnh không bị lòi ra */
+}
+
+/* 3. Cấu hình Ảnh bìa (Entry Cover) - QUAN TRỌNG NHẤT */
+body.project-page .entry-cover {
+  /* Đặt chiều cao cố định cho khung ảnh */
+  height: 220px; /* Bạn có thể tăng giảm số này nếu muốn ảnh cao/thấp hơn */
+  width: 100%;
+  margin-bottom: 0; /* Sát vào phần nội dung bên dưới */
+  border-radius: 12px 12px 0 0; /* Chỉ bo 2 góc trên */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Viền ngăn cách nhẹ */
+}
+
+/* 4. Cấu hình Ảnh bên trong */
+body.project-page .entry-cover img {
+  width: 100%;
+  height: 100%;
+  /* Kỹ thuật "Cắt ảnh": Lấp đầy khung mà không bị méo */
+  object-fit: cover;
+  /* Căn giữa trọng tâm ảnh */
+  object-position: center top;
+  transition: transform 0.5s ease;
+  border-radius: 12px 12px 0 0; /* Bo góc theo khung */
+}
+/* Hover vào thì phóng to ảnh nhẹ */
+body.project-page .post-entry:hover .entry-cover img {
+  transform: scale(1.05);
+}
+
+/* 5. Cấu hình Phần Nội dung (Wrapper) */
+body.project-page .post-entry > :not(.entry-cover) {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* Tiêu đề */
+body.project-page .entry-header {
+  padding-top: 20px;
+}
+body.project-page .entry-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  /* Giới hạn 2 dòng tiêu đề, quá sẽ hiện dấu ... */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 3rem; /* Đặt chiều cao tối thiểu để đồng bộ */
+}
+
+/* Tóm tắt */
+body.project-page .entry-content {
+  /* flex-grow: 1 để nó đẩy phần footer xuống đáy, cân bằng chiều cao */
+  flex-grow: 1;
+  /* Giới hạn 3 dòng tóm tắt */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* 6. Cấu hình Footer (Chứa Tags) */
+body.project-page .entry-footer {
+  padding-bottom: 25px; /* Canh lề dưới */
+  margin-top: auto; /* Đẩy xuống đáy của Flex container */
+}
+
+/* --- Responsive: Về 1 cột trên điện thoại --- */
+@media screen and (max-width: 768px) {
+  body.project-page .main {
+    grid-template-columns: 1fr; /* 1 cột duy nhất */
+    gap: 20px;
+  }
+  /* Trên mobile ảnh có thể thấp hơn chút cho gọn */
+  body.project-page .entry-cover {
+    height: 180px;
+  }
+}
+/* =========================================
+   18. CÂN BẰNG LƯỚI DỰ ÁN (EQUAL HEIGHT GRID)
+   ========================================= */
+
+/* 1. Thiết lập Grid 2 cột đều nhau & CĂN GIỮA */
+body.project-page .main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cột tỉ lệ 1:1 */
+  gap: 30px; /* Khoảng cách giữa các ô */
+  align-items: stretch;
+
+  /* --- CẬP NHẬT MỚI: CĂN GIỮA TRANG --- */
+  max-width: 1000px !important; /* Giới hạn chiều rộng cho vừa mắt */
+  margin: 40px auto !important; /* Tự động căn giữa trái/phải */
+  padding: 0 20px; /* Cách lề màn hình một chút để không bị dính sát */
+  justify-content: center; /* Đảm bảo nội dung nằm giữa */
+}
+
+/* Thêm đoạn này để Tiêu đề "Dự Án Cá Nhân" cũng ra giữa luôn cho đẹp */
+body.project-page .page-header {
+  text-align: center !important;
+  margin-bottom: 40px !important;
+  grid-column: 1 / -1; /* Tiêu đề băng ngang cả 2 cột */
+}
+
+/* ... (Các phần code bên dưới giữ nguyên) ... */
+/* =========================================
+   19. CĂN GIỮA TRANG CHI TIẾT DỰ ÁN
+   ========================================= */
+
+/* Class này do đoạn JS vừa sửa ở trên thêm vào */
+body.project-detail-view .main {
+  display: block !important; /* Hủy bỏ chế độ lưới (Grid) */
+  max-width: 900px !important; /* Giới hạn chiều rộng chuẩn để đọc */
+  margin: 40px auto !important; /* Tự động căn giữa màn hình */
+  padding: 0 20px;
+}
+
+/* Tinh chỉnh lại khung bài viết cho đẹp */
+body.project-detail-view .post-single {
+  margin: 0 auto; /* Căn giữa khung kính */
+  width: 100%;
 }

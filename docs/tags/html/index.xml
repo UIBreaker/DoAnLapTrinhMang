@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>HTML on Blog của Nhật Nam</title>
+    <link>https://UIBreaker.github.io/DoAnLapTrinhMang/tags/html/</link>
+    <description>Recent content in HTML on Blog của Nhật Nam</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi-VN</language>
+    <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://UIBreaker.github.io/DoAnLapTrinhMang/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sàn thương mại</title>
+      <link>https://UIBreaker.github.io/DoAnLapTrinhMang/projects/website-ban-hang/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://UIBreaker.github.io/DoAnLapTrinhMang/projects/website-ban-hang/</guid>
+      <description>Trang web thương mại điện tử cơ bản tích hợp đăng nhập Google và quản lý giỏ hàng realtime.</description>
+    </item>
+  </channel>
+</rss>
