@@ -201,3 +201,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ... (các phần dưới giữ nguyên) ...
 });
+/* =========================================
+   2. TÍNH NĂNG GỢI Ý TÌM KIẾM (QUICK SEARCH)
+   ========================================= */
+function fillSearch(keyword) {
+  // 1. Tìm ô nhập liệu của PaperMod
+  const searchInput = document.getElementById("searchInput");
+
+  if (searchInput) {
+    // 2. Điền từ khóa vào
+    searchInput.value = keyword;
+
+    // 3. Quan trọng: Giả lập sự kiện "người dùng đang gõ"
+    // để kích hoạt thư viện tìm kiếm Fuse.js chạy
+    const event = new Event("input", {
+      bubbles: true,
+      cancelable: true,
+    });
+    searchInput.dispatchEvent(event);
+
+    // 4. Focus vào ô input
+    searchInput.focus();
+  }
+}

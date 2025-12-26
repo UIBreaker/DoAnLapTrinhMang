@@ -110,3 +110,4 @@ publishDir = "docs" # Cấu hình folder build để đẩy lên Github Pages
         name = "Tìm Kiếm"  
         url = "/search"
         weight = 40
+        
