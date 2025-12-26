@@ -14,10 +14,14 @@ author = "Nguyễn Vũ Nhật Nam"
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowToc = true
+  
 
-  [params.assets]
+[params.assets]
     disableFingerprinting = true
-    customCSS = ["css/custom.css"] # <-- THÊM DÒNG NÀY
+    # Giữ nguyên tên file, không cần thêm đường dẫn nào cả
+    customCSS = ["custom.css"]
+    customJS = ["snow.js"]
+
 
   [params.profileMode]
     enabled = true
