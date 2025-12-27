@@ -29,9 +29,8 @@ Blog này không chỉ là bài tập đồ án, mà là **Technical Journal (Nh
 
 - **Đại học Công nghệ TP.HCM (HUTECH)**
   - _Chuyên ngành:_ Công nghệ thông tin
-  - _GPA hiện tại:_ **2.6/4.0** (Đang nỗ lực cải thiện qua các đồ án chuyên ngành)
+  - _GPA hiện tại:_ **2.7/4.0** (Đang nỗ lực cải thiện qua các đồ án chuyên ngành)
   - _Điểm mạnh:_ Các môn thực hành và đồ án đều đạt điểm Khá/Giỏi.
-  - _Đồ án tiêu biểu:_ Xây dựng ứng dụng Chat LAN (9.0 điểm), Web bán hàng MVC (8.5 điểm).
 
 ---
 
